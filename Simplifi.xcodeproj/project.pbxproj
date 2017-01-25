@@ -15,6 +15,7 @@
 		03CF60931E2EAC4400C007D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */; };
 		03CF609E1E2EAC4400C007D0 /* SimplifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF609D1E2EAC4400C007D0 /* SimplifiTests.swift */; };
 		03CF60A91E2EAC4500C007D0 /* SimplifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF60A81E2EAC4500C007D0 /* SimplifiUITests.swift */; };
+		94F1909F1E3862290027CCAD /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1909E1E3862290027CCAD /* OverviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		03CF60A41E2EAC4500C007D0 /* SimplifiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplifiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CF60A81E2EAC4500C007D0 /* SimplifiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiUITests.swift; sourceTree = "<group>"; };
 		03CF60AA1E2EAC4500C007D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94F1909E1E3862290027CCAD /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,10 @@
 		03CF60841E2EAC4400C007D0 /* Simplifi */ = {
 			isa = PBXGroup;
 			children = (
-				03CF60851E2EAC4400C007D0 /* AppDelegate.swift */,
-				03CF60871E2EAC4400C007D0 /* ViewController.swift */,
-				03CF60891E2EAC4400C007D0 /* Main.storyboard */,
-				03CF608F1E2EAC4400C007D0 /* Assets.xcassets */,
-				03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */,
-				03CF60941E2EAC4400C007D0 /* Info.plist */,
-				03CF608C1E2EAC4400C007D0 /* Simplifi.xcdatamodeld */,
+				94F1909C1E385D240027CCAD /* Model */,
+				94F1909A1E385D060027CCAD /* View */,
+				94F1909B1E385D1D0027CCAD /* Controller */,
+				94F1909D1E385D3B0027CCAD /* Utilities */,
 			);
 			path = Simplifi;
 			sourceTree = "<group>";
@@ -126,6 +125,42 @@
 				03CF60AA1E2EAC4500C007D0 /* Info.plist */,
 			);
 			path = SimplifiUITests;
+			sourceTree = "<group>";
+		};
+		94F1909A1E385D060027CCAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03CF60891E2EAC4400C007D0 /* Main.storyboard */,
+				03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		94F1909B1E385D1D0027CCAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03CF60871E2EAC4400C007D0 /* ViewController.swift */,
+				94F1909E1E3862290027CCAD /* OverviewViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		94F1909C1E385D240027CCAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03CF60851E2EAC4400C007D0 /* AppDelegate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		94F1909D1E385D3B0027CCAD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				03CF608F1E2EAC4400C007D0 /* Assets.xcassets */,
+				03CF60941E2EAC4400C007D0 /* Info.plist */,
+				03CF608C1E2EAC4400C007D0 /* Simplifi.xcdatamodeld */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
+				94F1909F1E3862290027CCAD /* OverviewViewController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
 				03CF60861E2EAC4400C007D0 /* AppDelegate.swift in Sources */,
 			);
@@ -518,6 +554,7 @@
 				03CF60AF1E2EAC4500C007D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03CF60B01E2EAC4500C007D0 /* Build configuration list for PBXNativeTarget "SimplifiTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +563,7 @@
 				03CF60B21E2EAC4500C007D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03CF60B31E2EAC4500C007D0 /* Build configuration list for PBXNativeTarget "SimplifiUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +572,7 @@
 				03CF60B51E2EAC4500C007D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
