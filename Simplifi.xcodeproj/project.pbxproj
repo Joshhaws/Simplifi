@@ -15,6 +15,10 @@
 		03CF60931E2EAC4400C007D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */; };
 		03CF609E1E2EAC4400C007D0 /* SimplifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF609D1E2EAC4400C007D0 /* SimplifiTests.swift */; };
 		03CF60A91E2EAC4500C007D0 /* SimplifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF60A81E2EAC4500C007D0 /* SimplifiUITests.swift */; };
+		03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D59D2F1E40E2A600BE0ADF /* EnvelopesController.swift */; };
+		03D59D321E40E4ED00BE0ADF /* EnvelopeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D59D311E40E4ED00BE0ADF /* EnvelopeDetailController.swift */; };
+		03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D59D331E40E60B00BE0ADF /* SignUpController.swift */; };
+		03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */; };
 		94F1909F1E3862290027CCAD /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1909E1E3862290027CCAD /* OverviewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +54,10 @@
 		03CF60A41E2EAC4500C007D0 /* SimplifiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplifiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CF60A81E2EAC4500C007D0 /* SimplifiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiUITests.swift; sourceTree = "<group>"; };
 		03CF60AA1E2EAC4500C007D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03D59D2F1E40E2A600BE0ADF /* EnvelopesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopesController.swift; sourceTree = "<group>"; };
+		03D59D311E40E4ED00BE0ADF /* EnvelopeDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeDetailController.swift; sourceTree = "<group>"; };
+		03D59D331E40E60B00BE0ADF /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		94F1909E1E3862290027CCAD /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +149,10 @@
 			children = (
 				03CF60871E2EAC4400C007D0 /* ViewController.swift */,
 				94F1909E1E3862290027CCAD /* OverviewViewController.swift */,
+				03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */,
+				03D59D2F1E40E2A600BE0ADF /* EnvelopesController.swift */,
+				03D59D311E40E4ED00BE0ADF /* EnvelopeDetailController.swift */,
+				03D59D331E40E60B00BE0ADF /* SignUpController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -302,8 +314,12 @@
 			files = (
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
 				94F1909F1E3862290027CCAD /* OverviewViewController.swift in Sources */,
+				03D59D321E40E4ED00BE0ADF /* EnvelopeDetailController.swift in Sources */,
+				03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
+				03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */,
 				03CF60861E2EAC4400C007D0 /* AppDelegate.swift in Sources */,
+				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

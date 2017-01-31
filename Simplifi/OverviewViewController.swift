@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OverrviewViewController: UITableViewController {
+class OverrviewViewController: UIViewController {
     
     var sessionId = ""
     
