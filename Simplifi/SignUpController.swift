@@ -13,9 +13,15 @@ class SignUpController: UIViewController {
     
     @IBOutlet weak var signupForm: UIView!
     @IBOutlet weak var signupButton: UIButton!
+    var users : [User] = []
     
     override func viewDidLoad() {
         setupView()
+        
+        loginRouter.getUsers(completion: { users in
+            print(users)
+            self.users = users
+        })
     }
     
     func setupView(){
