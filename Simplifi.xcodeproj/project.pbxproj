@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03093EAE1E4A60FE0028D7A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03093EAD1E4A60FE0028D7A6 /* Main.storyboard */; };
 		03CF60861E2EAC4400C007D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF60851E2EAC4400C007D0 /* AppDelegate.swift */; };
 		03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CF60871E2EAC4400C007D0 /* ViewController.swift */; };
-		03CF608B1E2EAC4400C007D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CF60891E2EAC4400C007D0 /* Main.storyboard */; };
 		03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03CF608C1E2EAC4400C007D0 /* Simplifi.xcdatamodeld */; };
 		03CF60901E2EAC4400C007D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03CF608F1E2EAC4400C007D0 /* Assets.xcassets */; };
 		03CF60931E2EAC4400C007D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */; };
@@ -43,10 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03093EAD1E4A60FE0028D7A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		03CF60821E2EAC4400C007D0 /* Simplifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simplifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CF60851E2EAC4400C007D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03CF60871E2EAC4400C007D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		03CF608A1E2EAC4400C007D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03CF608D1E2EAC4400C007D0 /* Simplifi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simplifi.xcdatamodel; sourceTree = "<group>"; };
 		03CF608F1E2EAC4400C007D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03CF60921E2EAC4400C007D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		94F1909A1E385D060027CCAD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				03CF60891E2EAC4400C007D0 /* Main.storyboard */,
+				03093EAD1E4A60FE0028D7A6 /* Main.storyboard */,
 				03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -328,7 +328,7 @@
 			files = (
 				03CF60931E2EAC4400C007D0 /* LaunchScreen.storyboard in Resources */,
 				03CF60901E2EAC4400C007D0 /* Assets.xcassets in Resources */,
-				03CF608B1E2EAC4400C007D0 /* Main.storyboard in Resources */,
+				03093EAE1E4A60FE0028D7A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,14 +446,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03CF60891E2EAC4400C007D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03CF608A1E2EAC4400C007D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		03CF60911E2EAC4400C007D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
