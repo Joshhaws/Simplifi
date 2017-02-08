@@ -21,7 +21,8 @@
 		03E84A141E44FF4C002793CD /* loginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E84A131E44FF4C002793CD /* loginRouter.swift */; };
 		03E84A161E44FFB6002793CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E84A151E44FFB6002793CD /* User.swift */; };
 		03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */; };
-		94F1909F1E3862290027CCAD /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1909E1E3862290027CCAD /* OverviewViewController.swift */; };
+		94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C663671E4AF4D700E78A48 /* OverviewViewController.swift */; };
+		94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */; };
 		E9A2C5D468594BFF6DDD0FF7 /* Pods_Simplifi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +66,8 @@
 		03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		38C4759E1608EC9D59E5F56E /* Pods-Simplifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.debug.xcconfig"; sourceTree = "<group>"; };
 		76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94F1909E1E3862290027CCAD /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		94C663671E4AF4D700E78A48 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalTabBarController.swift; sourceTree = "<group>"; };
 		F151B4A1C7F92856D655D2AA /* Pods-Simplifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,11 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				03CF60871E2EAC4400C007D0 /* ViewController.swift */,
-				94F1909E1E3862290027CCAD /* OverviewViewController.swift */,
 				03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */,
 				03D59D2F1E40E2A600BE0ADF /* EnvelopesController.swift */,
 				03D59D311E40E4ED00BE0ADF /* EnvelopeDetailController.swift */,
 				03D59D331E40E60B00BE0ADF /* SignUpController.swift */,
+				94C663671E4AF4D700E78A48 /* OverviewViewController.swift */,
+				94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -402,13 +405,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
-				94F1909F1E3862290027CCAD /* OverviewViewController.swift in Sources */,
 				03D59D321E40E4ED00BE0ADF /* EnvelopeDetailController.swift in Sources */,
 				03E84A141E44FF4C002793CD /* loginRouter.swift in Sources */,
 				03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */,
+				94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
 				03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */,
 				03CF60861E2EAC4400C007D0 /* AppDelegate.swift in Sources */,
+				94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */,
 				03E84A161E44FFB6002793CD /* User.swift in Sources */,
 				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
 			);
