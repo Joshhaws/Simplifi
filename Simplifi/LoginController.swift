@@ -43,8 +43,9 @@ class LoginController: UIViewController {
                 passwordInput.text = "Please enter a password"
             }
         } else {
-            UserDefaults.standard.set("valid", forKey: SyncHelper.Constants.sessionTokenKey)
-            UserDefaults.standard.synchronize()
+//            UserDefaults.standard.set("valid", forKey: SyncHelper.Constants.sessionTokenKey)
+//            UserDefaults.standard.synchronize()
+            SyncHelper.Constants.sessionTokenKey = "valid"
             self.dismiss(animated: true, completion: nil)
         }
 
