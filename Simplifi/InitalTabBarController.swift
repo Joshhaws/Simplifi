@@ -10,12 +10,10 @@ import UIKit
 
 class InitialTabBarController: UITabBarController {
     
-    var sessionToken = ""
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        if sessionToken == "" {
+        if SyncHelper.Constants.sessionTokenKey == "" {
             performSegue(withIdentifier: "loginModalSegue", sender: self)
         }
     }
