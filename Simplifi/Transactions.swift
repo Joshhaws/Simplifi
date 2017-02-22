@@ -1,17 +1,20 @@
 //
-//  Transaction.swift
+//  Transactions.swift
 //  Simplifi
 //
-//  Created by Jordan Rader on 2/15/17.
+//  Created by Jordan Rader on 2/21/17.
 //  Copyright © 2017 Joshua Haws. All rights reserved.
 //
 
 import Foundation
 
-class Transaction {
+import Foundation
+
+class Transactions {
     var storeName = ""
     var totalCost = 0.0
     var transDate = Date()
+    var lineItems : [TransactionItem] = [TransactionItem()]
     
     init(){}
     

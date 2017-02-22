@@ -10,7 +10,7 @@ import Foundation
 
 class Envelopes {
     var name = ""
-    var transactions : [Transaction] = [Transaction()]
+    var transactions : [Transactions] = [Transactions()]
     
     init(){
         

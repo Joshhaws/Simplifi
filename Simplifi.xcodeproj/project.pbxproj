@@ -22,10 +22,11 @@
 		03E84A161E44FFB6002793CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E84A151E44FFB6002793CD /* User.swift */; };
 		03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
-		94BFDAFC1E55727500E8AD5A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFB1E55727500E8AD5A /* Transaction.swift */; };
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
 		94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C663671E4AF4D700E78A48 /* OverviewViewController.swift */; };
 		94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */; };
+		94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */; };
+		94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */; };
 		E9A2C5D468594BFF6DDD0FF7 /* Pods_Simplifi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,10 +71,11 @@
 		38C4759E1608EC9D59E5F56E /* Pods-Simplifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.debug.xcconfig"; sourceTree = "<group>"; };
 		76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
-		94BFDAFB1E55727500E8AD5A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
 		94C663671E4AF4D700E78A48 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalTabBarController.swift; sourceTree = "<group>"; };
+		94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
 		F151B4A1C7F92856D655D2AA /* Pods-Simplifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,8 +210,9 @@
 			children = (
 				03CF60851E2EAC4400C007D0 /* AppDelegate.swift */,
 				03E84A151E44FFB6002793CD /* User.swift */,
-				94BFDAFB1E55727500E8AD5A /* Transaction.swift */,
 				94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */,
+				94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */,
+				94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -415,10 +418,10 @@
 			files = (
 				94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */,
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
+				94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */,
 				03D59D321E40E4ED00BE0ADF /* EnvelopeDetailController.swift in Sources */,
 				03E84A141E44FF4C002793CD /* loginRouter.swift in Sources */,
 				03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */,
-				94BFDAFC1E55727500E8AD5A /* Transaction.swift in Sources */,
 				94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
 				03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */,
@@ -426,6 +429,7 @@
 				94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */,
 				94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */,
 				03E84A161E44FFB6002793CD /* User.swift in Sources */,
+				94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */,
 				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

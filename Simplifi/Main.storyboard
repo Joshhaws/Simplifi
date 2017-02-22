@@ -326,7 +326,7 @@
         <!--[name]-->
         <scene sceneID="TmX-CY-bYC">
             <objects>
-                <viewController title="[name]" id="7ba-aK-vhM" sceneMemberID="viewController">
+                <viewController title="[name]" id="7ba-aK-vhM" customClass="EnvelopeDetailController" customModule="Simplifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwj-8u-NhT"/>
                         <viewControllerLayoutGuide type="bottom" id="2gJ-p1-YQc"/>
