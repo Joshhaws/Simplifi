@@ -10,9 +10,15 @@ import Foundation
 
 class Envelopes {
     var name = ""
+    var amount = 0.00
     var transactions : [Transactions] = [Transactions()]
     
-    init(){
-        
+    init(){}
+    
+    init (name: String, amount: Double, transactions: [Transactions]){
+        self.name = name
+        self.amount = amount
+        self.transactions = transactions
     }
+    
 }

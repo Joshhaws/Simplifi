@@ -18,9 +18,10 @@ class Transactions {
     
     init(){}
     
-    init(store: String, cost: Double, date: Date) {
+    init(store: String, cost: Double, date: Date, lineItems: [TransactionItem]) {
         self.storeName = store
         self.totalCost = cost
         self.transDate = date
+        self.lineItems = lineItems
     }
 }
