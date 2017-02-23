@@ -113,7 +113,7 @@
         <!--Item-->
         <scene sceneID="7Rz-LS-gOR">
             <objects>
-                <viewController id="81C-Uk-lKx" sceneMemberID="viewController">
+                <viewController id="81C-Uk-lKx" customClass="OverviewViewController" customModule="Simplifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Exn-Jl-Jfv"/>
                         <viewControllerLayoutGuide type="bottom" id="NnU-LF-O6Z"/>
@@ -201,10 +201,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="EMt-81-rWJ"/>
+                    <connections>
+                        <outlet property="overallBudgetBar" destination="MEK-KI-Aug" id="Lqd-fz-lbt"/>
+                        <outlet property="ratioLabel" destination="ZIP-7q-tHe" id="EdZ-BV-kao"/>
+                        <outlet property="spentTotalBar" destination="Rsk-ev-L2r" id="LYx-5m-8ST"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTo-1A-GUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1226.4000000000001" y="2489.5052473763121"/>
+            <point key="canvasLocation" x="-1226" y="1748"/>
         </scene>
         <!--Initial Tab Bar Controller-->
         <scene sceneID="dUG-Wv-bFi">
@@ -217,10 +222,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="NCE-cb-mWA" kind="presentation" identifier="loginModalSegue" id="wRh-AX-n9c"/>
-                        <segue destination="dlh-AJ-IA7" kind="relationship" relationship="viewControllers" id="HAN-nZ-cim"/>
-                        <segue destination="81C-Uk-lKx" kind="relationship" relationship="viewControllers" id="YbU-vd-Myt"/>
-                        <segue destination="cLi-QB-HyW" kind="relationship" relationship="viewControllers" id="PfR-LD-rlw"/>
-                        <segue destination="3de-Mi-pYg" kind="relationship" relationship="viewControllers" id="PAU-Vd-kEz"/>
+                        <segue destination="81C-Uk-lKx" kind="relationship" relationship="viewControllers" id="ksW-tG-lvJ"/>
+                        <segue destination="dlh-AJ-IA7" kind="relationship" relationship="viewControllers" id="m5r-HO-Fte"/>
+                        <segue destination="cLi-QB-HyW" kind="relationship" relationship="viewControllers" id="PIW-lD-VQd"/>
+                        <segue destination="3de-Mi-pYg" kind="relationship" relationship="viewControllers" id="4If-kK-Bou"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05V-fQ-w5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,7 +326,7 @@
         <!--[name]-->
         <scene sceneID="TmX-CY-bYC">
             <objects>
-                <viewController title="[name]" id="7ba-aK-vhM" sceneMemberID="viewController">
+                <viewController title="[name]" id="7ba-aK-vhM" customClass="EnvelopeDetailController" customModule="Simplifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwj-8u-NhT"/>
                         <viewControllerLayoutGuide type="bottom" id="2gJ-p1-YQc"/>
@@ -339,7 +344,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k4e-gN-9aK" id="kn0-qf-WkG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -347,7 +352,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a76-Dd-EWa" id="0uB-mD-PKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -358,7 +363,7 @@
                                         <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OCl-eg-KuK" id="Sm9-CD-q8F">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -738,7 +743,7 @@
         <!--Item-->
         <scene sceneID="JOF-4H-nlL">
             <objects>
-                <viewController id="dlh-AJ-IA7" customClass="OverviewViewController" customModule="Simplifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dlh-AJ-IA7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3C3-mz-Atr"/>
                         <viewControllerLayoutGuide type="bottom" id="GP9-Ex-yie"/>
@@ -789,7 +794,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsa-1j-HaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1226" y="1764"/>
+            <point key="canvasLocation" x="-1226" y="2490"/>
         </scene>
     </scenes>
 </document>

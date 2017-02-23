@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnvelopesController: UIViewController {
+class EnvelopesController: UITableViewController {
     
     override func viewDidLoad() {
 
