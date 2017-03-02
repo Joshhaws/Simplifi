@@ -21,6 +21,7 @@
 		03E84A141E44FF4C002793CD /* loginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E84A131E44FF4C002793CD /* loginRouter.swift */; };
 		03E84A161E44FFB6002793CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E84A151E44FFB6002793CD /* User.swift */; };
 		03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */; };
+		9404ACA81E67DDB4003BC405 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACA71E67DDB4003BC405 /* LoginData.swift */; };
 		94948FCF1E5E86EA00CC5A1F /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94948FCE1E5E86EA00CC5A1F /* TestData.swift */; };
 		94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
@@ -72,6 +73,7 @@
 		03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		38C4759E1608EC9D59E5F56E /* Pods-Simplifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.debug.xcconfig"; sourceTree = "<group>"; };
 		76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9404ACA71E67DDB4003BC405 /* LoginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		94948FCE1E5E86EA00CC5A1F /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeCell.swift; sourceTree = "<group>"; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */,
 				94948FCE1E5E86EA00CC5A1F /* TestData.swift */,
 				94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */,
+				9404ACA71E67DDB4003BC405 /* LoginData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
 				03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */,
+				9404ACA81E67DDB4003BC405 /* LoginData.swift in Sources */,
 				03CF60861E2EAC4400C007D0 /* AppDelegate.swift in Sources */,
 				94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */,
 				94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */,

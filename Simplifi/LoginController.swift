@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Unbox
 
 class LoginController: UIViewController {
 
@@ -43,10 +45,38 @@ class LoginController: UIViewController {
                 passwordInput.text = "Please enter a password"
             }
         } else {
-//            UserDefaults.standard.set("valid", forKey: SyncHelper.Constants.sessionTokenKey)
-//            UserDefaults.standard.synchronize()
-            SyncHelper.Constants.sessionTokenKey = "valid"
-            self.dismiss(animated: true, completion: nil)
+
+            let parameters : [String: Any] = [
+                "email" : "\(emailInput.text!)",
+                "password" : "\(passwordInput.text!)"
+            ]
+            
+            Alamofire.request("https://simplifiapi.herokuapp.com/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                .responseJSON { response in
+                    do {
+                        guard let data = response.data else {return}
+                        if data.isEmpty {
+                            let anim = CAKeyframeAnimation(keyPath: "transform")
+                            anim.values = [
+                                NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
+                                NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
+                            ]
+                            anim.autoreverses = true
+                            anim.repeatCount = 2
+                            anim.duration = 7/100
+                            self.view.layer.add(anim, forKey: nil)
+                        } else {
+                            let login : LoginData = try unbox(data: data)
+                            debugPrint(login)
+                            UserDefaults.standard.setValue(login.token, forKey: "user_auth_token")
+                            SyncHelper.Constants.sessionTokenKey = login.token
+                            self.dismiss(animated: true, completion: nil)
+                        }
+
+                    } catch {
+                        print(response.debugDescription as Any)
+                    }
+            }
         }
 
     }

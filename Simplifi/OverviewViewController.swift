@@ -16,7 +16,7 @@ class OverviewViewController : UIViewController {
     
     //testVariables
     var totalBudget = 750
-    var spentBudget = 400
+    var spentBudget = 600
     
     override func viewDidLoad() {
         super.viewDidLoad()
