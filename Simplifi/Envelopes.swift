@@ -11,14 +11,17 @@ import Foundation
 class Envelopes {
     var name = ""
     var amount = 0.00
-    var transactions : [Transactions] = [Transactions()]
+    var accountId = 0
+    var categoryId = 0
+    
     
     init(){}
     
-    init (name: String, amount: Double, transactions: [Transactions]){
+    init (name: String, amount: Double, accountId: Int, categoryId: Int){
         self.name = name
         self.amount = amount
-        self.transactions = transactions
+        self.accountId = accountId
+        self.categoryId = categoryId
     }
     
 }
