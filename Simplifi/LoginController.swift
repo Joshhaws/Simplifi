@@ -22,8 +22,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         setupView()
-        let preferences = UserDefaults.standard
-        
+//        let preferences = UserDefaults.standard
     }
     
     func setupView(){
@@ -45,41 +44,26 @@ class LoginController: UIViewController {
                 passwordInput.text = "Please enter a password"
             }
         } else {
-
-            let parameters : [String: Any] = [
-                "email" : "\(emailInput.text!)",
-                "password" : "\(passwordInput.text!)"
-            ]
             
-            Alamofire.request("https://simplifiapi.herokuapp.com/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-                .responseJSON { response in
-                    do {
-                        guard let data = response.data else {return}
-                        if data.isEmpty {
-                            let anim = CAKeyframeAnimation(keyPath: "transform")
-                            anim.values = [
-                                NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
-                                NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
-                            ]
-                            anim.autoreverses = true
-                            anim.repeatCount = 2
-                            anim.duration = 7/100
-                            self.view.layer.add(anim, forKey: nil)
-                        } else {
-                            let login : LoginData = try unbox(data: data)
-                            debugPrint(login)
-                            UserDefaults.standard.setValue(login.token, forKey: "user_auth_token")
-                            SyncHelper.Constants.sessionTokenKey = login.token
-                            self.dismiss(animated: true, completion: nil)
-                        }
-
-                    } catch {
-                        print(response.debugDescription as Any)
-                    }
+            let login = networkingResources()
+            let loginData = login.login(email: emailInput.text!, password: passwordInput.text!)
+            
+            if loginData.token != "" {
+                UserDefaults.standard.setValue(loginData.token, forKey: "user_auth_token")
+                SyncHelper.Constants.sessionTokenKey = loginData.token
+                self.dismiss(animated: true, completion: nil)
+                
+            } else {
+                let anim = CAKeyframeAnimation(keyPath: "transform")
+                anim.values = [
+                    NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
+                    NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
+                ]
+                anim.autoreverses = true
+                anim.repeatCount = 2
+                anim.duration = 7/100
+                self.view.layer.add(anim, forKey: nil)
             }
         }
-
     }
-    
-    
 }

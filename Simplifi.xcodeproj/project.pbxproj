@@ -22,8 +22,8 @@
 		03E84A161E44FFB6002793CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E84A151E44FFB6002793CD /* User.swift */; };
 		03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */; };
 		9404ACA81E67DDB4003BC405 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACA71E67DDB4003BC405 /* LoginData.swift */; };
-		9404ACAA1E6B214D003BC405 /* envelopesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACA91E6B214D003BC405 /* envelopesRouter.swift */; };
 		9404ACAC1E6B219F003BC405 /* urlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACAB1E6B219F003BC405 /* urlData.swift */; };
+		9404ACAE1E6B2480003BC405 /* networkingResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACAD1E6B2480003BC405 /* networkingResources.swift */; };
 		94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
@@ -75,8 +75,8 @@
 		38C4759E1608EC9D59E5F56E /* Pods-Simplifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.debug.xcconfig"; sourceTree = "<group>"; };
 		76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9404ACA71E67DDB4003BC405 /* LoginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
-		9404ACA91E6B214D003BC405 /* envelopesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = envelopesRouter.swift; sourceTree = "<group>"; };
 		9404ACAB1E6B219F003BC405 /* urlData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlData.swift; sourceTree = "<group>"; };
+		9404ACAD1E6B2480003BC405 /* networkingResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkingResources.swift; sourceTree = "<group>"; };
 		94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeCell.swift; sourceTree = "<group>"; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				03E84A131E44FF4C002793CD /* loginRouter.swift */,
-				9404ACA91E6B214D003BC405 /* envelopesRouter.swift */,
+				9404ACAD1E6B2480003BC405 /* networkingResources.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -428,7 +428,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9404ACAA1E6B214D003BC405 /* envelopesRouter.swift in Sources */,
 				94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */,
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
 				94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */,
@@ -445,6 +444,7 @@
 				94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */,
 				94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */,
 				03E84A161E44FFB6002793CD /* User.swift in Sources */,
+				9404ACAE1E6B2480003BC405 /* networkingResources.swift in Sources */,
 				94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */,
 				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
 			);

@@ -7,21 +7,32 @@
 //
 
 import Foundation
+import Unbox
 
-class Envelopes {
+struct Envelopes {
     var name = ""
     var amount = 0.00
-    var accountId = 0
+    var userId = 0
     var categoryId = 0
     
-    
-    init(){}
-    
-    init (name: String, amount: Double, accountId: Int, categoryId: Int){
+    init (name: String, amount: Double, userId: Int, categoryId: Int){
         self.name = name
         self.amount = amount
-        self.accountId = accountId
+        self.userId = userId
         self.categoryId = categoryId
     }
     
 }
+
+extension Envelopes : Unboxable {
+    init(unboxer: Unboxer) throws {
+        do {
+            self.name = try unboxer.unbox(key: "name")
+            self.amount = try unboxer.unbox(key: "amount")
+            self.userId = try unboxer.unbox(key: "userId")
+        } catch {
+            print("ended")
+        }
+    }
+}
+

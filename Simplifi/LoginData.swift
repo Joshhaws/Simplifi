@@ -14,6 +14,8 @@ struct LoginData {
     var firstName = ""
     var lastName = ""
     
+    init() {}
+    
     init(token: String, firstName: String, lastName: String){
         self.token = token
         self.firstName = firstName
