@@ -24,6 +24,9 @@
 		9404ACA81E67DDB4003BC405 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACA71E67DDB4003BC405 /* LoginData.swift */; };
 		9404ACAC1E6B219F003BC405 /* urlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACAB1E6B219F003BC405 /* urlData.swift */; };
 		9404ACAE1E6B2480003BC405 /* networkingResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACAD1E6B2480003BC405 /* networkingResources.swift */; };
+		9404ACB01E6B6412003BC405 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACAF1E6B6412003BC405 /* Goals.swift */; };
+		9404ACB21E6B6563003BC405 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB11E6B6563003BC405 /* Category.swift */; };
+		9404ACB41E6B6821003BC405 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB31E6B6821003BC405 /* Account.swift */; };
 		94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
@@ -77,6 +80,9 @@
 		9404ACA71E67DDB4003BC405 /* LoginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		9404ACAB1E6B219F003BC405 /* urlData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlData.swift; sourceTree = "<group>"; };
 		9404ACAD1E6B2480003BC405 /* networkingResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networkingResources.swift; sourceTree = "<group>"; };
+		9404ACAF1E6B6412003BC405 /* Goals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		9404ACB11E6B6563003BC405 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9404ACB31E6B6821003BC405 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeCell.swift; sourceTree = "<group>"; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
@@ -224,6 +230,9 @@
 				94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */,
 				94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */,
 				9404ACA71E67DDB4003BC405 /* LoginData.swift */,
+				9404ACAF1E6B6412003BC405 /* Goals.swift */,
+				9404ACB11E6B6563003BC405 /* Category.swift */,
+				9404ACB31E6B6821003BC405 /* Account.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -428,6 +437,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9404ACB01E6B6412003BC405 /* Goals.swift in Sources */,
+				9404ACB41E6B6821003BC405 /* Account.swift in Sources */,
 				94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */,
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
 				94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */,
@@ -447,6 +458,7 @@
 				9404ACAE1E6B2480003BC405 /* networkingResources.swift in Sources */,
 				94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */,
 				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
+				9404ACB21E6B6563003BC405 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

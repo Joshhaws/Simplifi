@@ -33,18 +33,18 @@ class networkingResources {
     }
     
     func getEnvelopes() -> [Envelopes]{
+        var envelopes = [Envelopes]()
         Alamofire.request(urlData.urlResources.envelopesUrl, headers: headers).responseJSON { response in
             do{
                 guard let data = response.data else { return }
-                let envelopes : [Envelopes] = try unbox(data: data)
+                envelopes = try unbox(data: data)
                 print(envelopes)
-                completion(envelopes)
             }catch{
                 print(response.error as Any)
             }
         }
+        return envelopes
     }
-    
     
     
     func login(email: String, password: String) -> LoginData {
@@ -69,7 +69,51 @@ class networkingResources {
         }
         return login
     }
+    
+    func getGoals() -> [Goals] {
+        var goals = [Goals]()
+        Alamofire.request(urlData.urlResources.goalsUrl, headers: headers).responseJSON { response in
+            do{
+                guard let data = response.data else { return }
+                goals = try unbox(data: data)
+                print(goals)
+            } catch {
+                print(response.error as Any)
+            }
+        }
+        return goals
+    }
+    
+    func getCategories() -> [Category] {
+        var categories = [Category]()
         
+        Alamofire.request(urlData.urlResources.categoriesUrl, headers: headers).responseJSON { response in
+            do{
+                guard let data = response.data else { return }
+                categories = try unbox(data: data)
+                print(categories)
+            }catch{
+                print(response.error as Any)
+            }
+        }
+        return categories
+    }
+    
+    func getAccounts() -> [Account] {
+        var accounts = [Account]()
+        
+        Alamofire.request(urlData.urlResources.categoriesUrl, headers: headers).responseJSON { response in
+            do{
+                guard let data = response.data else { return }
+                accounts = try unbox(data: data)
+                print(accounts)
+            }catch{
+                print(response.error as Any)
+            }
+        }
+        return accounts
+    }
+    
     
 }
 
