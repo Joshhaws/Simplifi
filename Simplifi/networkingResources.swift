@@ -56,7 +56,7 @@ class networkingResources {
         
         var login = LoginData()
         
-        Alamofire.request("https://simplifiapi.herokuapp.com/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request(urlData.urlResources.loginUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
                 do {
                     guard let data = response.data else {return}
