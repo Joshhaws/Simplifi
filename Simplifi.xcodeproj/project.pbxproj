@@ -27,6 +27,8 @@
 		9404ACB01E6B6412003BC405 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACAF1E6B6412003BC405 /* Goals.swift */; };
 		9404ACB21E6B6563003BC405 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB11E6B6563003BC405 /* Category.swift */; };
 		9404ACB41E6B6821003BC405 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB31E6B6821003BC405 /* Account.swift */; };
+		945CDB4E1E6E685600E534A5 /* envelopeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */; };
+		945CDB561E6E7B4700E534A5 /* EnvelopeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */; };
 		94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
@@ -83,6 +85,8 @@
 		9404ACAF1E6B6412003BC405 /* Goals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		9404ACB11E6B6563003BC405 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9404ACB31E6B6821003BC405 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = envelopeRouter.swift; sourceTree = "<group>"; };
+		945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeDataSource.swift; sourceTree = "<group>"; };
 		94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeCell.swift; sourceTree = "<group>"; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			children = (
 				03E84A131E44FF4C002793CD /* loginRouter.swift */,
 				9404ACAD1E6B2480003BC405 /* networkingResources.swift */,
+				945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -197,6 +202,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		945CDB541E6E7B3600E534A5 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
 		94F1909A1E385D060027CCAD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +222,7 @@
 		94F1909B1E385D1D0027CCAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				945CDB541E6E7B3600E534A5 /* DataSource */,
 				03CF60871E2EAC4400C007D0 /* ViewController.swift */,
 				03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */,
 				03D59D2F1E40E2A600BE0ADF /* EnvelopesController.swift */,
@@ -439,6 +453,7 @@
 			files = (
 				9404ACB01E6B6412003BC405 /* Goals.swift in Sources */,
 				9404ACB41E6B6821003BC405 /* Account.swift in Sources */,
+				945CDB4E1E6E685600E534A5 /* envelopeRouter.swift in Sources */,
 				94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */,
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
 				94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */,
@@ -456,6 +471,7 @@
 				94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */,
 				03E84A161E44FFB6002793CD /* User.swift in Sources */,
 				9404ACAE1E6B2480003BC405 /* networkingResources.swift in Sources */,
+				945CDB561E6E7B4700E534A5 /* EnvelopeDataSource.swift in Sources */,
 				94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */,
 				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
 				9404ACB21E6B6563003BC405 /* Category.swift in Sources */,

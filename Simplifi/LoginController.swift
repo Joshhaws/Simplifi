@@ -45,25 +45,37 @@ class LoginController: UIViewController {
             }
         } else {
             
-            let login = networkingResources()
-            let loginData = login.login(email: emailInput.text!, password: passwordInput.text!)
+            loginRouter.attemptLogin(userEmail: emailInput.text!, userPassword: passwordInput.text!, completion: { success in
+                if !success {
+                    let anim = CAKeyframeAnimation(keyPath: "transform")
+                    anim.values = [
+                        NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
+                        NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
+                    ]
+                    anim.autoreverses = true
+                    anim.repeatCount = 2
+                    anim.duration = 7/100
+                    self.view.layer.add(anim, forKey: nil)
+                } else {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
             
-            if loginData.token != "" {
-                UserDefaults.standard.setValue(loginData.token, forKey: "user_auth_token")
-                SyncHelper.Constants.sessionTokenKey = loginData.token
-                self.dismiss(animated: true, completion: nil)
-                
-            } else {
-                let anim = CAKeyframeAnimation(keyPath: "transform")
-                anim.values = [
-                    NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
-                    NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
-                ]
-                anim.autoreverses = true
-                anim.repeatCount = 2
-                anim.duration = 7/100
-                self.view.layer.add(anim, forKey: nil)
-            }
+//            if loginData.token != "" {
+//                UserDefaults.standard.setValue(loginData.token, forKey: "user_auth_token")
+//                SyncHelper.Constants.sessionTokenKey = loginData.token
+//                self.dismiss(animated: true, completion: nil)
+//            } else {
+//                let anim = CAKeyframeAnimation(keyPath: "transform")
+//                anim.values = [
+//                    NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
+//                    NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
+//                ]
+//                anim.autoreverses = true
+//                anim.repeatCount = 2
+//                anim.duration = 7/100
+//                self.view.layer.add(anim, forKey: nil)
+//            }
         }
     }
 }
