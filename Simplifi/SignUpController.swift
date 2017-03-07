@@ -18,10 +18,10 @@ class SignUpController: UIViewController {
     override func viewDidLoad() {
         setupView()
         
-        loginRouter.getUsers(completion: { users in
-            print(users)
-            self.users = users
-        })
+//        loginRouter.getUsers(completion: { users in
+//            print(users)
+//            self.users = users
+//        })
     }
     
     func setupView(){

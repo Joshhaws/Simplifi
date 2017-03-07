@@ -11,15 +11,13 @@ import Unbox
 
 struct Envelopes {
     var name = ""
-    var amount = 0.00
-    var userId = 0
-    var categoryId = 0
+    var amount = 0
+    var totalSpentEnvelope = 0
     
-    init (name: String, amount: Double, userId: Int, categoryId: Int){
+    init (name: String, amount: Int, totalSpentEnvelope: Int){
         self.name = name
         self.amount = amount
-        self.userId = userId
-        self.categoryId = categoryId
+        self.totalSpentEnvelope = totalSpentEnvelope
     }
     
 }
@@ -29,7 +27,7 @@ extension Envelopes : Unboxable {
         do {
             self.name = try unboxer.unbox(key: "name")
             self.amount = try unboxer.unbox(key: "amount")
-            self.userId = try unboxer.unbox(key: "userId")
+            self.totalSpentEnvelope = try unboxer.unbox(key: "total_spent_envelope")
         } catch {
             print("ended")
         }

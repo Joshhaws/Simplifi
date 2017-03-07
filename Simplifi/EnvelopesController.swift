@@ -10,17 +10,26 @@ import UIKit
 
 class EnvelopesController: UITableViewController {
     
+    var envelopes = [Envelopes]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        envelopeRouter.getEnvelopes(completion: { envelopes in
+            self.envelopes = envelopes
+            
+            
+        })
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        print(envelopes.count)
+        return envelopes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EnvelopeCell", for: indexPath)
+        cell.textLabel?.text = envelopes[indexPath.row].name
         return cell
     }
     

@@ -15,8 +15,8 @@ class networkingResources {
     static let shared = networkingResources()
 
     let headers : HTTPHeaders = [
-        "X-Mashape-Key": "\(UserDefaults.standard.value(forKey: "user_auth_token"))",
-        "Accept": "application/json"
+        "Authorization": "Token token=\(UserDefaults.standard.value(forKey: "user_auth_token"))",
+        "Content-Type": "application/json"
     ]
     
     func getUsers(completion: @escaping ( _ users: [User]) -> Void){
@@ -34,11 +34,11 @@ class networkingResources {
     
     func getEnvelopes() -> [Envelopes]{
         var envelopes = [Envelopes]()
-        Alamofire.request(urlData.urlResources.envelopesUrl, headers: headers).responseJSON { response in
+        Alamofire.request("https://simplifiapi.herokuapp.com/envelopes", headers: headers).responseJSON { response in
             do{
                 guard let data = response.data else { return }
                 envelopes = try unbox(data: data)
-                print(envelopes)
+                debugPrint(envelopes)
             }catch{
                 print(response.error as Any)
             }
@@ -47,27 +47,30 @@ class networkingResources {
     }
     
     
-    func login(email: String, password: String) -> LoginData {
+    func login(email: String, password: String, completion: @escaping(_ login: LoginData) -> Void) {
         
         let parameters : [String: Any] = [
             "email" : "\(email)",
             "password" : "\(password)"
         ]
-        
+        print("...........Parameters...............")
+        debugPrint(parameters)
         var login = LoginData()
         
-        Alamofire.request(urlData.urlResources.loginUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("https://simplifiapi.herokuapp.com/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
                 do {
                     guard let data = response.data else {return}
                     login = try unbox(data: data)
+                    print("....AlamoFire....")
                     debugPrint(login)
-                    
+                    completion(login)
                 } catch {
                     print(response.debugDescription as Any)
                 }
         }
-        return login
+        
+        completion(login)
     }
     
     func getGoals() -> [Goals] {
