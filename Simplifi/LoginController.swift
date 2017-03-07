@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Unbox
 
 class LoginController: UIViewController {
 
@@ -20,8 +22,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         setupView()
-        let preferences = UserDefaults.standard
-        
+//        let preferences = UserDefaults.standard
     }
     
     func setupView(){
@@ -43,13 +44,26 @@ class LoginController: UIViewController {
                 passwordInput.text = "Please enter a password"
             }
         } else {
-//            UserDefaults.standard.set("valid", forKey: SyncHelper.Constants.sessionTokenKey)
-//            UserDefaults.standard.synchronize()
-            SyncHelper.Constants.sessionTokenKey = "valid"
-            self.dismiss(animated: true, completion: nil)
+            
+            let login = networkingResources()
+            let loginData = login.login(email: emailInput.text!, password: passwordInput.text!)
+            
+            if loginData.token != "" {
+                UserDefaults.standard.setValue(loginData.token, forKey: "user_auth_token")
+                SyncHelper.Constants.sessionTokenKey = loginData.token
+                self.dismiss(animated: true, completion: nil)
+                
+            } else {
+                let anim = CAKeyframeAnimation(keyPath: "transform")
+                anim.values = [
+                    NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
+                    NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
+                ]
+                anim.autoreverses = true
+                anim.repeatCount = 2
+                anim.duration = 7/100
+                self.view.layer.add(anim, forKey: nil)
+            }
         }
-
     }
-    
-    
 }

@@ -14,4 +14,9 @@ class TransactionItem {
     var itemTotal = 0.00
     
     init () {}
+    
+    init (itemName: String, itemTotal: Double) {
+        self.itemName = itemName
+        self.itemTotal = itemTotal
+    }
 }

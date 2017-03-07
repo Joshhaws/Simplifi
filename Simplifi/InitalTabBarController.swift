@@ -13,8 +13,10 @@ class InitialTabBarController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        if SyncHelper.Constants.sessionTokenKey == "" {
+        if ((UserDefaults.standard.value(forKey: "user_auth_token") == nil)) {
             performSegue(withIdentifier: "loginModalSegue", sender: self)
+        } else {
+            print(UserDefaults.standard.value(forKey: "user_auth_token")!)
         }
     }
 }
