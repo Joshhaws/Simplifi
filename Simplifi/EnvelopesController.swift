@@ -17,8 +17,7 @@ class EnvelopesController: UITableViewController {
         super.viewDidLoad()
         envelopeRouter.getEnvelopes(completion: { envelopes in
             self.envelopes = envelopes
-            
-            
+            self.tableView.reloadData()
         })
     }
     

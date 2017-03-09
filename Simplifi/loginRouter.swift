@@ -20,6 +20,7 @@ class loginRouter {
                 let login : LoginData = try unbox(data: jsonData)
                 if login.token != "" {
                     UserDefaults.standard.set(login.token, forKey: "user_auth_token")
+                    SyncHelper.Constants.sessionTokenKey = login.token
                     completion(true)
                 }
                 completion(false)

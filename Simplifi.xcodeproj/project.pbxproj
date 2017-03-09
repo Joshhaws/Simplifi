@@ -29,6 +29,10 @@
 		9404ACB41E6B6821003BC405 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB31E6B6821003BC405 /* Account.swift */; };
 		945CDB4E1E6E685600E534A5 /* envelopeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */; };
 		945CDB561E6E7B4700E534A5 /* EnvelopeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */; };
+		945CDB581E6F052900E534A5 /* categoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB571E6F052900E534A5 /* categoriesRouter.swift */; };
+		945CDB5A1E6F060200E534A5 /* goalsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB591E6F060200E534A5 /* goalsRouter.swift */; };
+		945CDB5C1E6F067800E534A5 /* accountsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB5B1E6F067800E534A5 /* accountsRouter.swift */; };
+		946F654B1E70B6EC009431FB /* accountTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F654A1E70B6EC009431FB /* accountTransactions.swift */; };
 		94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
@@ -87,6 +91,10 @@
 		9404ACB31E6B6821003BC405 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = envelopeRouter.swift; sourceTree = "<group>"; };
 		945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeDataSource.swift; sourceTree = "<group>"; };
+		945CDB571E6F052900E534A5 /* categoriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoriesRouter.swift; sourceTree = "<group>"; };
+		945CDB591E6F060200E534A5 /* goalsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goalsRouter.swift; sourceTree = "<group>"; };
+		945CDB5B1E6F067800E534A5 /* accountsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountsRouter.swift; sourceTree = "<group>"; };
+		946F654A1E70B6EC009431FB /* accountTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTransactions.swift; sourceTree = "<group>"; };
 		94948FD01E5EB39C00CC5A1F /* EnvelopeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeCell.swift; sourceTree = "<group>"; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
@@ -181,6 +189,10 @@
 				03E84A131E44FF4C002793CD /* loginRouter.swift */,
 				9404ACAD1E6B2480003BC405 /* networkingResources.swift */,
 				945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */,
+				945CDB571E6F052900E534A5 /* categoriesRouter.swift */,
+				945CDB591E6F060200E534A5 /* goalsRouter.swift */,
+				945CDB5B1E6F067800E534A5 /* accountsRouter.swift */,
+				946F654A1E70B6EC009431FB /* accountTransactions.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -453,11 +465,15 @@
 			files = (
 				9404ACB01E6B6412003BC405 /* Goals.swift in Sources */,
 				9404ACB41E6B6821003BC405 /* Account.swift in Sources */,
+				946F654B1E70B6EC009431FB /* accountTransactions.swift in Sources */,
+				945CDB581E6F052900E534A5 /* categoriesRouter.swift in Sources */,
 				945CDB4E1E6E685600E534A5 /* envelopeRouter.swift in Sources */,
 				94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */,
 				03CF608E1E2EAC4400C007D0 /* Simplifi.xcdatamodeld in Sources */,
 				94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */,
 				03D59D321E40E4ED00BE0ADF /* EnvelopeDetailController.swift in Sources */,
+				945CDB5A1E6F060200E534A5 /* goalsRouter.swift in Sources */,
+				945CDB5C1E6F067800E534A5 /* accountsRouter.swift in Sources */,
 				03E84A141E44FF4C002793CD /* loginRouter.swift in Sources */,
 				94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */,
 				03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */,

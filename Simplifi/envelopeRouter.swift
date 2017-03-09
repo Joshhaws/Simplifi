@@ -14,9 +14,9 @@ class envelopeRouter {
     
     struct envelopeResource{
         static let url = urlData.urlResources.envelopesUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
+        static let token = SyncHelper.Constants.sessionTokenKey
         static let headers: HTTPHeaders = [
-            "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
+            "Authorization": "Token token=\(envelopeResource.token!)",
             "Content-Type": "application/json"
         ]
     }
@@ -24,6 +24,8 @@ class envelopeRouter {
     class func getEnvelopes(completion: @escaping (_ envelopes: [Envelopes]) -> Void) {
         Alamofire.request("https://simplifiapi.herokuapp.com/envelopes", headers: envelopeResource.headers).responseJSON { response in
             do{
+                print("Headers")
+                debugPrint(envelopeResource.headers)
                 guard let jsonData = response.data else {return}
                 let envelopes: [Envelopes] = try unbox(data: jsonData)
                 debugPrint(envelopes)
