@@ -60,22 +60,6 @@ class LoginController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
             })
-            
-//            if loginData.token != "" {
-//                UserDefaults.standard.setValue(loginData.token, forKey: "user_auth_token")
-//                SyncHelper.Constants.sessionTokenKey = loginData.token
-//                self.dismiss(animated: true, completion: nil)
-//            } else {
-//                let anim = CAKeyframeAnimation(keyPath: "transform")
-//                anim.values = [
-//                    NSValue(caTransform3D: CATransform3DMakeTranslation(-5,0,0)),
-//                    NSValue(caTransform3D: CATransform3DMakeTranslation(5,0,0))
-//                ]
-//                anim.autoreverses = true
-//                anim.repeatCount = 2
-//                anim.duration = 7/100
-//                self.view.layer.add(anim, forKey: nil)
-//            }
         }
     }
 }

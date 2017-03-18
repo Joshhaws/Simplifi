@@ -16,12 +16,12 @@ class OverviewViewController : UIViewController {
     
     //testVariables
     var totalBudget = 750
-    var spentBudget = 600
+    var spentBudget = 800
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        setupBudgetBox()
+        setupProgressBars()
     }
     
     override func viewDidLayoutSubviews() {
@@ -29,14 +29,23 @@ class OverviewViewController : UIViewController {
     }
     
     func setupBudgetBox() {
-        
         ratioLabel.text = "\(spentBudget)/\(totalBudget)"
         
         //get total budget width
         let budgetWidth = overallBudgetBar.frame.size.width
         //get ratio
         let ratio : CGFloat = CGFloat(spentBudget)/CGFloat(totalBudget)
-        spentTotalBar.frame.size.width = budgetWidth * ratio
-        
+        if ratio >= 1.0 {
+            let inverseRatio = 1.0/ratio
+            overallBudgetBar.backgroundColor = UIColor.red
+            spentTotalBar.frame.size.width = budgetWidth * (inverseRatio)
+        } else {
+            spentTotalBar.frame.size.width = budgetWidth * ratio
+        }
+    }
+    
+    func setupProgressBars() {
+        self.overallBudgetBar.layer.cornerRadius = 2.0
+        self.spentTotalBar.layer.cornerRadius = 2.0
     }
 }

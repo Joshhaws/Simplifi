@@ -7,21 +7,35 @@
 //
 
 import Foundation
+import Unbox
 
 import Foundation
 
-class Transactions {
-    var storeName = ""
+struct Transactions {
     var totalCost = 0.0
-    var transDate = Date()
-    var lineItems : [TransactionItem] = [TransactionItem()]
+    var transDate = ""
+    var categoryId = 0
+    //    var lineItems : [TransactionItem] = [TransactionItem()]
     
     init(){}
     
-    init(store: String, cost: Double, date: Date, lineItems: [TransactionItem]) {
-        self.storeName = store
+    init(cost: Double, date: String, categoryId: Int) {
         self.totalCost = cost
         self.transDate = date
-        self.lineItems = lineItems
+        self.categoryId = categoryId
+        //        self.lineItems = lineItems
+    }
+}
+
+extension Transactions: Unboxable{
+    init(unboxer: Unboxer) throws {
+        do {
+            self.totalCost = try unboxer.unbox(key: "amount")
+            self.transDate = try unboxer.unbox(key: "transaction_date")
+            self.categoryId = try unboxer.unbox(keyPath: "category_id")
+//            self.lineItems = try unboxer.unbox(key: "line_items")
+        }catch{
+            print("Unable to unbox data for Transactions")
+        }
     }
 }

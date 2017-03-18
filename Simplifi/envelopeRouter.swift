@@ -14,9 +14,9 @@ class envelopeRouter {
     
     struct envelopeResource{
         static let url = urlData.urlResources.envelopesUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
+        static let token = SyncHelper.Constants.sessionTokenKey
         static let headers: HTTPHeaders = [
-            "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
+            "Authorization": "Token token=\(envelopeResource.token!)",
             "Content-Type": "application/json"
         ]
     }
@@ -26,10 +26,21 @@ class envelopeRouter {
             do{
                 guard let jsonData = response.data else {return}
                 let envelopes: [Envelopes] = try unbox(data: jsonData)
-                debugPrint(envelopes)
                 completion(envelopes)
             } catch {
                 print("Unable to read JSON, no envelopes exists\n \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    class func getEnvelopeForId(id: Int, completion: @escaping (_ envelope: Envelopes) -> Void) {
+        Alamofire.request("\(envelopeResource.url)/\(id)", headers: envelopeResource.headers).responseJSON { response in
+            do{
+                guard let jsonData = response.data else {return}
+                let envelope: Envelopes = try unbox(data: jsonData)
+                completion(envelope)
+            } catch {
+                print("Unable to read JSON, envelope with that ID doesn't exist\n \(error.localizedDescription)")
             }
         }
     }

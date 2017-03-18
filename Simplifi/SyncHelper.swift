@@ -14,7 +14,7 @@ class SyncHelper {
         static let baseSyncUrl = ""
         static let failureCode = ""
         static let resultKey = "result"
-        static var sessionTokenKey = ""
+        static var sessionTokenKey = UserDefaults.standard.value(forKey: "user_auth_token")
         static let userIDKey = ""
         static let successResult = "success"
     }
