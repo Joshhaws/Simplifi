@@ -24,14 +24,23 @@ class envelopeRouter {
     class func getEnvelopes(completion: @escaping (_ envelopes: [Envelopes]) -> Void) {
         Alamofire.request("https://simplifiapi.herokuapp.com/envelopes", headers: envelopeResource.headers).responseJSON { response in
             do{
-                print("Headers")
-                debugPrint(envelopeResource.headers)
                 guard let jsonData = response.data else {return}
                 let envelopes: [Envelopes] = try unbox(data: jsonData)
-                debugPrint(envelopes)
                 completion(envelopes)
             } catch {
                 print("Unable to read JSON, no envelopes exists\n \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    class func getEnvelopeForId(id: Int, completion: @escaping (_ envelope: Envelopes) -> Void) {
+        Alamofire.request("\(envelopeResource.url)/\(id)", headers: envelopeResource.headers).responseJSON { response in
+            do{
+                guard let jsonData = response.data else {return}
+                let envelope: Envelopes = try unbox(data: jsonData)
+                completion(envelope)
+            } catch {
+                print("Unable to read JSON, envelope with that ID doesn't exist\n \(error.localizedDescription)")
             }
         }
     }

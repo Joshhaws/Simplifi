@@ -13,11 +13,17 @@ struct Envelopes {
     var name = ""
     var amount = 0
     var totalSpentEnvelope = 0
+    var envelopeId = 0
+    var accountTransactions = [Transactions()]
     
-    init (name: String, amount: Int, totalSpentEnvelope: Int){
+    init (){}
+    
+    init (name: String, amount: Int, totalSpentEnvelope: Int, id: Int, transactions: [Transactions]){
         self.name = name
         self.amount = amount
         self.totalSpentEnvelope = totalSpentEnvelope
+        self.envelopeId = id
+        self.accountTransactions = transactions
     }
     
 }
@@ -28,8 +34,10 @@ extension Envelopes : Unboxable {
             self.name = try unboxer.unbox(key: "name")
             self.amount = try unboxer.unbox(key: "amount")
             self.totalSpentEnvelope = try unboxer.unbox(key: "total_spent_envelope")
+            self.envelopeId = try unboxer.unbox(key: "id")
+            self.accountTransactions = try unboxer.unbox(keyPath: "account_transactions")
         } catch {
-            print("ended")
+            print("Unable to parse Envelope details")
         }
     }
 }

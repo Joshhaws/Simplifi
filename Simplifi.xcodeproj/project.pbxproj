@@ -28,7 +28,6 @@
 		9404ACB21E6B6563003BC405 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB11E6B6563003BC405 /* Category.swift */; };
 		9404ACB41E6B6821003BC405 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404ACB31E6B6821003BC405 /* Account.swift */; };
 		945CDB4E1E6E685600E534A5 /* envelopeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */; };
-		945CDB561E6E7B4700E534A5 /* EnvelopeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */; };
 		945CDB581E6F052900E534A5 /* categoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB571E6F052900E534A5 /* categoriesRouter.swift */; };
 		945CDB5A1E6F060200E534A5 /* goalsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB591E6F060200E534A5 /* goalsRouter.swift */; };
 		945CDB5C1E6F067800E534A5 /* accountsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CDB5B1E6F067800E534A5 /* accountsRouter.swift */; };
@@ -38,6 +37,7 @@
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
 		94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C663671E4AF4D700E78A48 /* OverviewViewController.swift */; };
 		94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */; };
+		94D0B4F61E7B8BDD00388507 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0B4F51E7B8BDD00388507 /* BudgetViewController.swift */; };
 		94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */; };
 		94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */; };
 		E9A2C5D468594BFF6DDD0FF7 /* Pods_Simplifi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C6395DFC610D6F5076224B /* Pods_Simplifi.framework */; };
@@ -90,7 +90,6 @@
 		9404ACB11E6B6563003BC405 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9404ACB31E6B6821003BC405 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		945CDB4D1E6E685600E534A5 /* envelopeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = envelopeRouter.swift; sourceTree = "<group>"; };
-		945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeDataSource.swift; sourceTree = "<group>"; };
 		945CDB571E6F052900E534A5 /* categoriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoriesRouter.swift; sourceTree = "<group>"; };
 		945CDB591E6F060200E534A5 /* goalsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goalsRouter.swift; sourceTree = "<group>"; };
 		945CDB5B1E6F067800E534A5 /* accountsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountsRouter.swift; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
 		94C663671E4AF4D700E78A48 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalTabBarController.swift; sourceTree = "<group>"; };
+		94D0B4F51E7B8BDD00388507 /* BudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
 		F151B4A1C7F92856D655D2AA /* Pods-Simplifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifi/Pods-Simplifi.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,14 +214,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		945CDB541E6E7B3600E534A5 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				945CDB551E6E7B4700E534A5 /* EnvelopeDataSource.swift */,
-			);
-			name = DataSource;
-			sourceTree = "<group>";
-		};
 		94F1909A1E385D060027CCAD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +226,6 @@
 		94F1909B1E385D1D0027CCAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				945CDB541E6E7B3600E534A5 /* DataSource */,
 				03CF60871E2EAC4400C007D0 /* ViewController.swift */,
 				03EEAF6B1E3BFCA4001EFC67 /* LoginController.swift */,
 				03D59D2F1E40E2A600BE0ADF /* EnvelopesController.swift */,
@@ -242,6 +233,7 @@
 				03D59D331E40E60B00BE0ADF /* SignUpController.swift */,
 				94C663671E4AF4D700E78A48 /* OverviewViewController.swift */,
 				94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */,
+				94D0B4F51E7B8BDD00388507 /* BudgetViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -478,6 +470,7 @@
 				94948FD11E5EB39C00CC5A1F /* EnvelopeCell.swift in Sources */,
 				03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */,
 				94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */,
+				94D0B4F61E7B8BDD00388507 /* BudgetViewController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
 				03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */,
 				9404ACA81E67DDB4003BC405 /* LoginData.swift in Sources */,
@@ -487,7 +480,6 @@
 				94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */,
 				03E84A161E44FFB6002793CD /* User.swift in Sources */,
 				9404ACAE1E6B2480003BC405 /* networkingResources.swift in Sources */,
-				945CDB561E6E7B4700E534A5 /* EnvelopeDataSource.swift in Sources */,
 				94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */,
 				03EEAF6C1E3BFCA4001EFC67 /* LoginController.swift in Sources */,
 				9404ACB21E6B6563003BC405 /* Category.swift in Sources */,

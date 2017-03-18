@@ -7,5 +7,6 @@ target 'Simplifi' do
 
   pod ‘Alamofire’
   pod ‘Unbox’
+  pod ‘Charts/Realm'
 
 end

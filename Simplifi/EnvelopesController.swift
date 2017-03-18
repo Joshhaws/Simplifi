@@ -22,7 +22,6 @@ class EnvelopesController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(envelopes.count)
         return envelopes.count
     }
     
@@ -30,6 +29,16 @@ class EnvelopesController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EnvelopeCell", for: indexPath)
         cell.textLabel?.text = envelopes[indexPath.row].name
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVc = segue.destination as? EnvelopeDetailController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destVc.envelope = envelopes[indexPath.row]
+            }
+        }
+        
+        print(">>>>>>>>>>>>>>>>>Prepare for Segue")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
