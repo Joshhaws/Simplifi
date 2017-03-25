@@ -37,8 +37,6 @@ class EnvelopesController: UITableViewController {
                 destVc.envelope = envelopes[indexPath.row]
             }
         }
-        
-        print(">>>>>>>>>>>>>>>>>Prepare for Segue")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
