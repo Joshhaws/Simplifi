@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/OverviewViewController.swift"
-            timestampString = "511103819.775422"
+            timestampString = "512015842.279985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "setupBudgetBox()"
             landmarkType = "7">
          </BreakpointContent>
@@ -283,7 +283,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
             endingLineNumber = "11"
-            landmarkName = "EnvelopesDetailController"
+            landmarkName = "EnvelopeDetailController"
             landmarkType = "3">
             <Locations>
                <Location
@@ -371,11 +371,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/EnvelopeDetailController.swift"
-            timestampString = "511104312.632636"
+            timestampString = "511845440.865642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>

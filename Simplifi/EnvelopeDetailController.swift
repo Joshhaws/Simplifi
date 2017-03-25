@@ -20,10 +20,15 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
     var envelope = Envelopes()
     
     override func viewDidLoad() {
-        debugPrint(envelope)
+        print(">>>>>Transactions>>>>>")
+        debugPrint(envelope.accountTransactions)
+        self.title = envelope.name
         envelopeNameLabel.text = envelope.name
         setRatioBar()
         setupProgressBars()
+        
+        self.envelopeDetailTable.dataSource = self
+        
         self.envelopeDetailTable.reloadData()
     }
     
