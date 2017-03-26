@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="-1842.4000000000001" y="394.45277361319341"/>
         </scene>
-        <!--Item-->
+        <!--Account-->
         <scene sceneID="ZHP-Y3-sXB">
             <objects>
                 <viewController id="cLi-QB-HyW" sceneMemberID="viewController">
@@ -135,13 +135,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.7843137255" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="PNU-Ew-gVd"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="Contacts-50" selectedImage="Contacts-50" id="PNU-Ew-gVd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nog-6n-prl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1226.4000000000001" y="3223.5382308845578"/>
         </scene>
-        <!--Item-->
+        <!--Overview-->
         <scene sceneID="7Rz-LS-gOR">
             <objects>
                 <viewController id="81C-Uk-lKx" customClass="OverviewViewController" customModule="Simplifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,7 +231,7 @@
                             <constraint firstItem="wut-h7-jSq" firstAttribute="top" secondItem="Exn-Jl-Jfv" secondAttribute="bottom" constant="39" id="qeJ-9e-a8Z"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="EMt-81-rWJ"/>
+                    <tabBarItem key="tabBarItem" title="Overview" image="Bullish-50" selectedImage="Bullish-50" id="EMt-81-rWJ"/>
                     <connections>
                         <outlet property="barView" destination="wut-h7-jSq" id="pIy-x3-P4e"/>
                         <outlet property="overallBudgetBar" destination="MEK-KI-Aug" id="Lqd-fz-lbt"/>
@@ -264,12 +264,12 @@
             </objects>
             <point key="canvasLocation" x="-4706" y="2491"/>
         </scene>
-        <!--Item-->
+        <!--Envelopes-->
         <scene sceneID="suP-Op-DpY">
             <objects>
                 <navigationController id="umh-9U-ZJx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zpN-fe-Lq3"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tHY-ys-oM3">
+                    <tabBarItem key="tabBarItem" title="Envelopes" image="Message-50" selectedImage="Message-50" id="zpN-fe-Lq3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tHY-ys-oM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -294,7 +294,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Xr-GE-czm" id="l1f-gK-M8f">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -305,7 +305,7 @@
                             <outlet property="delegate" destination="tQj-L0-wcA" id="v5x-T3-fea"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="A3c-3O-KDh"/>
+                    <tabBarItem key="tabBarItem" title="Envelopes" image="Message-50" selectedImage="Message-50" id="A3c-3O-KDh"/>
                     <navigationItem key="navigationItem" title="Envelopes" id="bAT-3i-jyt">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="vQd-jb-Qob"/>
                     </navigationItem>
@@ -317,7 +317,7 @@
             </objects>
             <point key="canvasLocation" x="-1226" y="2490"/>
         </scene>
-        <!--Item-->
+        <!--Scanner-->
         <scene sceneID="AQ8-A2-3YV">
             <objects>
                 <viewController id="3de-Mi-pYg" sceneMemberID="viewController">
@@ -346,7 +346,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="19e-ca-Irx"/>
+                    <tabBarItem key="tabBarItem" title="Scanner" image="Camera-50" selectedImage="Camera-50" id="19e-ca-Irx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrN-DM-LiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -380,7 +380,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k4e-gN-9aK" id="kn0-qf-WkG">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -388,7 +388,7 @@
                                         <rect key="frame" x="0.0" y="72" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a76-Dd-EWa" id="0uB-mD-PKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -399,7 +399,7 @@
                                         <rect key="frame" x="0.0" y="116" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OCl-eg-KuK" id="Sm9-CD-q8F">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -487,7 +487,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U6n-TD-A1R" id="JW5-7G-Xs8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -509,7 +509,7 @@
         <scene sceneID="cdi-4c-8MC">
             <objects>
                 <navigationController id="NCE-cb-mWA" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ebC-Ft-JE5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ebC-Ft-JE5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -728,4 +728,10 @@
             <point key="canvasLocation" x="577" y="2737"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bullish-50" width="50" height="50"/>
+        <image name="Camera-50" width="50" height="50"/>
+        <image name="Contacts-50" width="50" height="50"/>
+        <image name="Message-50" width="50" height="50"/>
+    </resources>
 </document>
