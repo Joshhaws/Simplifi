@@ -1,0 +1,16 @@
+need accounts page
+Need goals page
+  talk about what the purpose of this is
+Add categories section
+
+API
+  Transactions need to have
+    name of the store
+    date
+    Total Spent
+    Tax..?
+
+  Batch processing
+  How to separate out transactions into months
+  how to view past months
+  need to add Monthly income
