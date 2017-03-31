@@ -117,7 +117,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Plaid Link setup with custom configuration
     func setupPlaidWithCustomConfiguration() {
         // With custom configuration
-        let linkConfiguration = PLKConfiguration(key: "4181b5e7e3476f2974824d3a1d4e52", env: .development, product: .auth)
+        let linkConfiguration = PLKConfiguration(key: "4181b5e7e3476f2974824d3a1d4e52", env: .sandbox, product: .auth, selectAccount: false, longtailAuth: false, apiVersion: .PLKAPIv2)
         linkConfiguration.clientName = "SimpliFi"
         PLKPlaidLink.setup(with: linkConfiguration) { (success, error) in
             if (success) {

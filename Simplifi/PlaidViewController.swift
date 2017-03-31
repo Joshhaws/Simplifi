@@ -112,7 +112,6 @@ extension PlaidViewController : PLKPlaidLinkViewDelegate {
             NSLog("Successfully linked account!\npublicToken: \(publicToken)\nmetadata: \(String(describing: metadata))")
             self.handleSuccessWithToken(publicToken, metadata: metadata as [String : AnyObject]?)
         }
-        
     }
     
     func linkViewController(_ linkViewController: PLKPlaidLinkViewController, didExitWithError error: Error?, metadata: [String : Any]?) {

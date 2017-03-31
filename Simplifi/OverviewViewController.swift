@@ -20,6 +20,7 @@ class OverviewViewController : UIViewController {
     var totalBudget = 750
     var spentBudget = 600
     var envelopes = [Envelopes]()
+    var envelopeNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,29 +68,30 @@ class OverviewViewController : UIViewController {
         barView.xAxis.drawGridLinesEnabled = false
         barView.leftAxis.drawGridLinesEnabled = false
         barView.rightAxis.drawGridLinesEnabled = false
-        barView.xAxis.drawLabelsEnabled = false
+        barView.xAxis.drawLabelsEnabled = true
         barView.rightAxis.drawLabelsEnabled = false
         barView.legend.enabled = false
+        barView.xAxis.labelPosition = .bottom
+        barView.xAxis.granularity = 1
     }
     
     
     func updateChartWithData() {
+        
         var dataEntries: [BarChartDataEntry] = []
-        var dataSets: [ChartDataEntry] = [ChartDataEntry]()
+        
         for i in 0..<envelopes.count {
-            let dataEntry = ChartDataEntry(x: Double(i), y: Double(envelopes[i].amount))
-            dataSets.append(dataEntry)
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(envelopes[i].amount))
+            dataEntries.append(dataEntry)
+            envelopeNames.append(envelopes[i].name)
         }
         
-        let barChartSet = BarChartDataSet(values: dataEntries, label: "Bar Data")
-        let barChartData = BarChartData(dataSets: [barChartSet])
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Envelopes")
+        chartDataSet.colors = ChartColorTemplates.material()
+        let chartData = BarChartData(dataSets: [chartDataSet])
         
-        barView.data = barChartData
-        
-        
-        
-
-        
+        barView.data = chartData
+        barView.xAxis.valueFormatter = IndexAxisValueFormatter(values:envelopeNames)
     }
     
 }
