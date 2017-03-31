@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import LinkKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -85,6 +86,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        #if USE_CUSTOM_CONFIG
+            setupPlaidWithCustomConfiguration()
+        #else
+            setupPlaidLinkWithSharedConfiguration()
+        #endif
+    }
+    
+    // MARK: Plaid Link setup with shared configuration from Info.plist
+    func setupPlaidLinkWithSharedConfiguration() {
+        // With shared configuration from Info.plist
+        PLKPlaidLink.setup { (success, error) in
+            if (success) {
+                // Handle success here, e.g. by posting a notification
+                NSLog("Plaid Link setup was successful")
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "PLDPlaidLinkSetupFinished"), object: self)
+            }
+            else {
+                NSLog("Unable to setup Plaid Link due to: \(String(describing: error?.localizedDescription))")
+            }
+        }
+    }
+    
+    
+    // MARK: Plaid Link setup with custom configuration
+    func setupPlaidWithCustomConfiguration() {
+        // With custom configuration
+        let linkConfiguration = PLKConfiguration(key: "4181b5e7e3476f2974824d3a1d4e52", env: .development, product: .auth)
+        linkConfiguration.clientName = "SimpliFi"
+        PLKPlaidLink.setup(with: linkConfiguration) { (success, error) in
+            if (success) {
+                // Handle success here, e.g. by posting a notification
+                NSLog("Plaid Link setup was successful")
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "PLDPlaidLinkSetupFinished"), object: self)
+            }
+            else {
+                NSLog("Unable to setup custom config Plaid Link due to: \(String(describing: error?.localizedDescription))")
             }
         }
     }

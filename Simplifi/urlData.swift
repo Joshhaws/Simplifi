@@ -19,6 +19,7 @@ class urlData {
         static let accountTransactionUrl = "https://simplifiapi.herokuapp.com/account_transactions"
         static let lineItemsUrl = "https://simplifiapi.herokuapp.com/line_items"
         static let usersUrl = "https://simplifiapi.herokuapp.com/users"
+        static let accessTokenUrl = "simplifiapi.herokuapp.com/get_access_token"
     }
     
 }
