@@ -14,14 +14,16 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var envelopeNameLabel: UILabel!
     @IBOutlet weak var envelopeRatioLabel: UILabel!
     @IBOutlet weak var envelopeDetailTable: UITableView!
-    @IBOutlet weak var totalSpentBar: UIView!
+//    @IBOutlet weak var totalSpentBar: UIView!
+//    @IBOutlet weak var overallBudget: UIView!
     @IBOutlet weak var overallBudget: UIView!
+    @IBOutlet weak var totalSpentBar: UIView!
+    @IBOutlet weak var envelopeView: UIView!
+    
     
     var envelope = Envelopes()
     
     override func viewDidLoad() {
-        print(">>>>>Transactions>>>>>")
-        debugPrint(envelope.accountTransactions)
         self.title = envelope.name
         envelopeNameLabel.text = envelope.name
         setRatioBar()
@@ -30,6 +32,11 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
         self.envelopeDetailTable.dataSource = self
         
         self.envelopeDetailTable.reloadData()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setRatioBar()
     }
     
     private func setRatioBar() {
@@ -48,21 +55,26 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
         }
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("cellCount \(envelope.accountTransactions.count)")
         return envelope.accountTransactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = envelopeDetailTable.dequeueReusableCell(withIdentifier: "envelopeTransactionCell", for: indexPath)
-        cell.textLabel?.text = "Walmart"
-        print("cell Name")
+        if envelope.accountTransactions[indexPath.row].storeName == "" {
+            cell.textLabel?.text = envelope.accountTransactions[indexPath.row].testAccountName
+        } else{
+            cell.textLabel?.text = envelope.accountTransactions[indexPath.row].storeName
+        }
+        cell.detailTextLabel?.text = "$\(envelope.accountTransactions[indexPath.row].amount)"
         return cell
     }
     
     func setupProgressBars() {
         self.overallBudget.layer.cornerRadius = 2.0
         self.totalSpentBar.layer.cornerRadius = 2.0
+        self.envelopeView.layer.cornerRadius = 2.0
     }
     
 }

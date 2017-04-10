@@ -14,7 +14,7 @@ class accountTransactions {
     
     struct accountTransactionsResources {
         static let url = urlData.urlResources.accountTransactionUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
+        static let token = UserDefaults.standard.string(forKey: "user_auth_token")
         static let headers: HTTPHeaders = [
             "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
             "Content-Type": "application/json"

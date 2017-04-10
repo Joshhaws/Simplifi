@@ -13,6 +13,7 @@ struct User {
     var firstName: String = ""
     var lastName: String = ""
     var email: String = ""
+    var userId: Int = 0
 //    var password: String
     
     init(firstName: String, lastName: String, email: String){
@@ -29,6 +30,7 @@ extension User: Unboxable{
             self.firstName = try unboxer.unbox(key: "first_name")
             self.lastName = try unboxer.unbox(key: "last_name")
             self.email = try unboxer.unbox(key: "email")
+            self.userId = try unboxer.unbox(key: "id")
         }catch{
             print("ended")
         }

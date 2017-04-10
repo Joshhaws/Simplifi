@@ -28,6 +28,17 @@ class EnvelopesController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EnvelopeCell", for: indexPath)
         cell.textLabel?.text = envelopes[indexPath.row].name
+        let ratio = Double(envelopes[indexPath.row].totalSpentEnvelope / envelopes[indexPath.row].amount)
+        cell.detailTextLabel?.text = "\(envelopes[indexPath.row].totalSpentEnvelope)/\(envelopes[indexPath.row].amount)"
+        if ratio > 1.0 {
+            cell.detailTextLabel?.textColor = UIColor.red
+        } else if ratio > 0.75 {
+            cell.detailTextLabel?.textColor = UIColor.orange
+        } else if ratio > 50 {
+            cell.detailTextLabel?.textColor = UIColor.yellow
+        } else {
+            cell.detailTextLabel?.textColor = UIColor.green
+        }
         return cell
     }
     

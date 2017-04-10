@@ -18,7 +18,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if UserDefaults.standard.value(forKey: "user_auth_token") == nil {
+            showLoginScreen()
+        } else {
+            showMain()
+        }
         return true
+    }
+    
+    func showLoginScreen(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginNavigationVC") as! UINavigationController
+        window?.rootViewController = loginVC
+        window?.makeKeyAndVisible()
+    }
+    
+    func showMain(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = storyBoard.instantiateViewController(withIdentifier: "initialTabView") as! UITabBarController
+        animateTransition(to: mainVC)
+    }
+    
+    func animateTransition(to viewController: UIViewController) {
+        if let currentVC = window?.rootViewController {
+            viewController.view.frame = currentVC.view.frame
+            viewController.view.alpha = 0
+            window?.addSubview(viewController.view)
+            
+            UIView.animate(withDuration: 1, animations: {
+                viewController.view.alpha = 1
+            }, completion: { (finished) in
+                self.window!.rootViewController = viewController
+                self.window!.makeKeyAndVisible()
+            })
+        } else {
+            window?.rootViewController = viewController
+            window?.makeKeyAndVisible()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

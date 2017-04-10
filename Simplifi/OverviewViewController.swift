@@ -15,24 +15,31 @@ class OverviewViewController : UIViewController {
     @IBOutlet weak var overallBudgetBar: UIView!
     @IBOutlet weak var ratioLabel: UILabel!
     @IBOutlet weak var barView: BarChartView!
+    @IBOutlet weak var budgetView: UIView!
     
     //testVariables
     var totalBudget = 750
-    var spentBudget = 600
+    var spentBudget = 300
     var envelopes = [Envelopes]()
     var envelopeNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBudgetBox()
+        UserDefaults.standard.synchronize()
         
         if ((UserDefaults.standard.value(forKey: "user_auth_token") != nil)) {
             envelopeRouter.getEnvelopes(completion: { envelopes in
                 self.envelopes = envelopes
                 self.updateChartWithData()
                 self.setupChartView()
+                self.setupBudgetBox()
             })
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.setupBudgetBox()
+        self.setupChartView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,6 +65,8 @@ class OverviewViewController : UIViewController {
     func setupProgressBars() {
         self.overallBudgetBar.layer.cornerRadius = 2.0
         self.spentTotalBar.layer.cornerRadius = 2.0
+        self.budgetView.layer.cornerRadius = 2.0
+        self.barView.layer.cornerRadius = 2.0
     }
     
     func setupChartView() {
@@ -81,7 +90,7 @@ class OverviewViewController : UIViewController {
         var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<envelopes.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(envelopes[i].amount))
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(envelopes[i].totalSpentEnvelope))
             dataEntries.append(dataEntry)
             envelopeNames.append(envelopes[i].name)
         }
@@ -92,6 +101,7 @@ class OverviewViewController : UIViewController {
         
         barView.data = chartData
         barView.xAxis.valueFormatter = IndexAxisValueFormatter(values:envelopeNames)
+        barView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
     
 }

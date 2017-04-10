@@ -14,7 +14,7 @@ class envelopeRouter {
     
     struct envelopeResource{
         static let url = urlData.urlResources.envelopesUrl
-        static let token = SyncHelper.Constants.sessionTokenKey
+        static let token = UserDefaults.standard.string(forKey: "user_auth_token")
         static let headers: HTTPHeaders = [
             "Authorization": "Token token=\(envelopeResource.token!)",
             "Content-Type": "application/json"

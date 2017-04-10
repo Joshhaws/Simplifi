@@ -14,9 +14,9 @@ class categoriesRouter {
     
     struct categoriesResource {
         static let url = urlData.urlResources.categoriesUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
+        static let token = UserDefaults.standard.string(forKey: "user_auth_token")
         static let headers: HTTPHeaders = [
-            "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
+            "Authorization": "Token token=ZSfOnDomDBkJRmlxfoN1CAtt",
             "Content-Type": "application/json"
         ]
     }
@@ -26,10 +26,9 @@ class categoriesRouter {
             do{
                 guard let jsonData = response.data else {return}
                 let categories: [Category] = try unbox(data: jsonData)
-                debugPrint(categories)
                 completion(categories)
             } catch {
-                print("Unable to read JSON, no categories exists\n \(error.localizedDescription)")
+                print("Unable to read JSON, no categories exist\n \(error.localizedDescription)")
             }
         }
     }

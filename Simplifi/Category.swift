@@ -11,29 +11,27 @@ import Unbox
 
 struct Category {
     var categoryId = 0
-    var name = ""
-    var amount = 0.00
-    var envelopeId = 0
+    var group = ""
+    var hierarchy_1 = ""
+    var hierarchy_2 = ""
+    var hierarchy_3 = ""
+    var envelope: EnvelopeMini = EnvelopeMini()
     
     init() {}
     
-    init(categoryId : Int, name: String, amount: Double, envelopeId: Int) {
-        self.categoryId = categoryId
-        self.name = name
-        self.amount = amount
-        self.envelopeId = envelopeId
-    }
+    
 }
 
 extension Category : Unboxable {
     init(unboxer: Unboxer) throws {
         do {
             self.categoryId = try unboxer.unbox(key: "id")
-            self.name = try unboxer.unbox(key: "name")
-            self.amount = try unboxer.unbox(key: "amount")
-            self.envelopeId = try unboxer.unbox(key: "envelope_id")
-        }catch{
-            print("ended")
+            self.hierarchy_1 = try unboxer.unbox(key: "hierarchy_1")
+            self.hierarchy_2 = try unboxer.unbox(key: "hierarchy_2")
+            self.hierarchy_3 = try unboxer.unbox(key: "hierarchy_3")
+            self.envelope = try unboxer.unbox(key: "envelope")
+        } catch {
+            print("Unable to unbox data for Categories")
         }
     }
     

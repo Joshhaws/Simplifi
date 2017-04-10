@@ -70,10 +70,22 @@ class PlaidViewController : ViewController {
         present(linkViewController, animated: true, completion: nil)
     }
     
+    func presentPlaidFromClass() -> PLKPlaidLinkViewController {
+        // With custom configuration9
+        let linkConfiguration = PLKConfiguration(key: SyncHelper.Constants.plaidApiKey, env: .sandbox, product: .auth, selectAccount: false, longtailAuth: false, apiVersion: .PLKAPIv2)
+        linkConfiguration.clientName = "SimpliFi"
+        let linkViewDelegate = self
+        let linkViewController = PLKPlaidLinkViewController(configuration: linkConfiguration, delegate: linkViewDelegate)
+        if (UI_USER_INTERFACE_IDIOM() == .pad) {
+            linkViewController.modalPresentationStyle = .formSheet
+        }
+        return linkViewController
+    }
+    
     // MARK: Plaid Link setup with custom configuration
     func presentPlaidLinkWithCustomConfiguration() {
         // With custom configuration9
-        let linkConfiguration = PLKConfiguration(key: "4181b5e7e3476f2974824d3a1d4e52", env: .sandbox, product: .auth, selectAccount: false, longtailAuth: false, apiVersion: .PLKAPIv2)
+        let linkConfiguration = PLKConfiguration(key: SyncHelper.Constants.plaidApiKey, env: .sandbox, product: .auth, selectAccount: false, longtailAuth: false, apiVersion: .PLKAPIv2)
         linkConfiguration.clientName = "SimpliFi"
         let linkViewDelegate = self
         let linkViewController = PLKPlaidLinkViewController(configuration: linkConfiguration, delegate: linkViewDelegate)

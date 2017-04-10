@@ -18,6 +18,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordError: UILabel!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var signupBotton: UIButton!
 
     
     override func viewDidLoad() {
@@ -26,8 +27,9 @@ class LoginController: UIViewController {
     }
     
     func setupView(){
-        self.loginForm.layer.cornerRadius = 20.0
-        self.loginButton.layer.cornerRadius = 15.0
+        self.loginForm.layer.cornerRadius = 2.0
+        self.loginButton.layer.cornerRadius = 2.0
+        self.signupBotton.layer.cornerRadius = 2.0
     }
     
     
@@ -57,7 +59,9 @@ class LoginController: UIViewController {
                     anim.duration = 7/100
                     self.view.layer.add(anim, forKey: nil)
                 } else {
-                    self.dismiss(animated: true, completion: nil)
+                    if let app = UIApplication.shared.delegate as? AppDelegate{
+                        app.showMain()
+                    }
                 }
             })
         }

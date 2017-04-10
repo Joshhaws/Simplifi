@@ -25,8 +25,8 @@ class SignUpController: UIViewController {
     }
     
     func setupView(){
-        self.signupForm.layer.cornerRadius = 20.0
-        self.signupButton.layer.cornerRadius = 15.0
+        self.signupForm.layer.cornerRadius = 2.0
+        self.signupButton.layer.cornerRadius = 2.0
     }
     
     @IBAction func signupPressed(_ sender: Any) {

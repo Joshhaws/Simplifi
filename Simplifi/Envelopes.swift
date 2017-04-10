@@ -14,7 +14,7 @@ struct Envelopes {
     var amount = 0
     var totalSpentEnvelope = 0
     var envelopeId = 0
-    var accountTransactions = [Transactions()]
+    var accountTransactions: [Transactions] = []
     
     init (){}
     

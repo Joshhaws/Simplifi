@@ -53,8 +53,6 @@ class networkingResources {
             "email" : "\(email)",
             "password" : "\(password)"
         ]
-        print("...........Parameters...............")
-        debugPrint(parameters)
         var login = LoginData()
         
         Alamofire.request("https://simplifiapi.herokuapp.com/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
