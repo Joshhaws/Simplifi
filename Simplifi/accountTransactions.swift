@@ -14,15 +14,36 @@ class accountTransactions {
     
     struct accountTransactionsResources {
         static let url = urlData.urlResources.accountTransactionUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
-        static let headers: HTTPHeaders = [
-            "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
-            "Content-Type": "application/json"
-        ]
+        static let token = UserDefaults.standard.string(forKey: "user_auth_token")
     }
     
+    
+    class func setCategoryForTransaction(categoryId: Int, transactionId: Int, completion: @escaping (_ success: Bool) -> Void){
+        let headers: HTTPHeaders = [
+            "Authorization": "Token token=\(UserDefaults.standard.string(forKey: "user_auth_token")!)",
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request("\(accountTransactionsResources.url)/\(transactionId)", method: .put, parameters: ["category_id" : categoryId], encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            do{
+                guard let jsonData = response.data else{ return }
+                let _ : UserEnvelopes = try unbox(data: jsonData)
+                completion(true)
+            } catch{
+                completion(false)
+                print("Unable to read JSON, no profile exists\n \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    
+    
     class func getGoals(completion: @escaping (_ accountTransactions: [Transactions]) -> Void) {
-        Alamofire.request(accountTransactionsResources.url, headers: accountTransactionsResources.headers).responseJSON { response in
+        let headers: HTTPHeaders = [
+            "Authorization": "Token token=\(UserDefaults.standard.string(forKey: "user_auth_token")!)",
+            "Content-Type": "application/json"
+        ]
+        Alamofire.request(accountTransactionsResources.url, headers: headers).responseJSON { response in
             do{
                 guard let jsonData = response.data else {return}
                 let accountTransactions: [Transactions] = try unbox(data: jsonData)

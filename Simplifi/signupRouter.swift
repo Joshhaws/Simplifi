@@ -28,17 +28,22 @@ class signupRouter {
             ]
         ]
         
-        Alamofire.request(urlData.urlResources.usersUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+        Alamofire.request(urlData.urlResources.signupUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             do{
                 guard let jsonData = response.data else{ return }
                 let login : LoginData = try unbox(data: jsonData)
                 if login.token != "" {
                     UserDefaults.standard.set(login.token, forKey: "user_auth_token")
-                    SyncHelper.Constants.sessionTokenKey = login.token
+                    UserDefaults.standard.set(login.userId, forKey: "user_id")
+                    UserDefaults.standard.set(login.firstName, forKey: "user_firstName")
+                    UserDefaults.standard.set(login.lastName, forKey: "user_lastName")
+                    UserDefaults.standard.set(login.email, forKey: "user_email")
+                    UserDefaults.standard.synchronize()
+
                     completion(true)
                 }
-                completion(false)
             } catch{
+                completion(false)
                 print("Unable to read JSON, Unable to sign up new user\n \(error.localizedDescription)")
             }
         }

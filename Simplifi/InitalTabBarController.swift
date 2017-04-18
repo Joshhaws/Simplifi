@@ -11,22 +11,12 @@ import UIKit
 class InitialTabBarController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.78, blue: 0.33, alpha: 1)
         super.viewWillAppear(true)
-        
-        if ((UserDefaults.standard.value(forKey: "user_auth_token") == nil)) {
-            performSegue(withIdentifier: "loginModalSegue", sender: self)
-        } else {
-            print(UserDefaults.standard.value(forKey: "user_auth_token")!)
-        }
+//        print(UserDefaults.standard.string(forKey: "user_auth_token"))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
-        if ((UserDefaults.standard.value(forKey: "user_auth_token") == nil)) {
-            performSegue(withIdentifier: "loginModalSegue", sender: self)
-        } else {
-            print(UserDefaults.standard.value(forKey: "user_auth_token")!)
-        }
     }
 }

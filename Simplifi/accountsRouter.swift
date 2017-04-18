@@ -14,22 +14,22 @@ class accountRouter {
     
     struct accountsResource {
         static let url = urlData.urlResources.accountsUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
-        static let headers: HTTPHeaders = [
-            "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
-            "Content-Type": "application/json"
-        ]
+        static let token = UserDefaults.standard.string(forKey: "user_auth_token")
+
     }
     
-    class func getGoals(completion: @escaping (_ accounts: [Account]) -> Void) {
-        Alamofire.request(accountsResource.url, headers: accountsResource.headers).responseJSON { response in
+    class func getAccounts(completion: @escaping (_ accounts: [Account]) -> Void) {
+        let headers: HTTPHeaders = [
+            "Authorization": "Token token=\(UserDefaults.standard.string(forKey: "user_auth_token")!)",
+            "Content-Type": "application/json"
+        ]
+        Alamofire.request(accountsResource.url, headers: headers).responseJSON { response in
             do{
                 guard let jsonData = response.data else {return}
                 let accounts: [Account] = try unbox(data: jsonData)
-                debugPrint(accounts)
                 completion(accounts)
             } catch {
-                print("Unable to read JSON, no categories exists\n \(error.localizedDescription)")
+                print("Unable to read JSON, no accounts exists\n \(error.localizedDescription)")
             }
         }
     }

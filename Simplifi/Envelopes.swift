@@ -14,7 +14,7 @@ struct Envelopes {
     var amount = 0
     var totalSpentEnvelope = 0
     var envelopeId = 0
-    var accountTransactions = [Transactions()]
+    var accountTransactions: [Transactions] = []
     
     init (){}
     
@@ -34,7 +34,7 @@ extension Envelopes : Unboxable {
             self.name = try unboxer.unbox(key: "name")
             self.amount = try unboxer.unbox(key: "amount")
             self.totalSpentEnvelope = try unboxer.unbox(key: "total_spent_envelope")
-            self.envelopeId = try unboxer.unbox(key: "id")
+            self.envelopeId = try unboxer.unbox(key: "envelope_id")
             self.accountTransactions = try unboxer.unbox(keyPath: "account_transactions")
         } catch {
             print("Unable to parse Envelope details")

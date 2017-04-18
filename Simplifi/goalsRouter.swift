@@ -14,9 +14,9 @@ class goalsRouter {
     
     struct goalsResource {
         static let url = urlData.urlResources.goalsUrl
-        static let token = UserDefaults.standard.value(forKey: "user_auth_key")
+        static let token = UserDefaults.standard.string(forKey: "user_auth_token")
         static let headers: HTTPHeaders = [
-            "Authorization": "Token token=1xiLYo9rXFhWXstGi3F0QAtt",
+            "Authorization": "Token token=\(goalsResource.token)",
             "Content-Type": "application/json"
         ]
     }

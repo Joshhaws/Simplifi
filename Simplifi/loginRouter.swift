@@ -20,30 +20,23 @@ class loginRouter {
                 let login : LoginData = try unbox(data: jsonData)
                 if login.token != "" {
                     UserDefaults.standard.set(login.token, forKey: "user_auth_token")
+                    UserDefaults.standard.set(login.userId, forKey: "user_id")
+                    UserDefaults.standard.set(login.firstName, forKey: "user_firstName")
+                    UserDefaults.standard.set(login.lastName, forKey: "user_lastName")
+                    UserDefaults.standard.set(login.email, forKey: "user_email")
+                    UserDefaults.standard.synchronize()
+                    
                     SyncHelper.Constants.sessionTokenKey = login.token
+                    SyncHelper.Constants.userIDKey = login.userId
+                    SyncHelper.Constants.userFirstName = login.firstName
+                    SyncHelper.Constants.userLastName = login.lastName
+                    SyncHelper.Constants.userEmail = login.email
                     completion(true)
                 }
-                completion(false)
             } catch{
+                completion(false)
                 print("Unable to read JSON, no profile exists\n \(error.localizedDescription)")
             }
         }
     }
-    
-        
-//    class func getUsers(completion: @escaping ( _ users: [User]) -> Void){
-//        Alamofire.request(loginResource.baseUrl).responseJSON { response in
-//            do{
-//                guard let data = response.data else { return }
-//                let users : [User] = try unbox(data: data)
-//                print(users)
-//                completion(users)
-//            }catch{
-//                print(response.error)
-//            }
-//        }
-//    }
-    
-    
-
 }

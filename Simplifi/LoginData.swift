@@ -13,6 +13,8 @@ struct LoginData {
     var token = ""
     var firstName = ""
     var lastName = ""
+    var userId = 0
+    var email = ""
     
     init() {}
     
@@ -29,8 +31,10 @@ extension LoginData: Unboxable {
             self.firstName = try unboxer.unbox(key: "first_name")
             self.lastName = try unboxer.unbox(key: "last_name")
             self.token = try unboxer.unbox(key: "token")
+            self.userId = try unboxer.unbox(key: "id")
+            self.email = try unboxer.unbox(key: "email")
         }catch{
-            print("ended")
+            print("Unable to unbox data for Login Data")
         }
     }
 }
