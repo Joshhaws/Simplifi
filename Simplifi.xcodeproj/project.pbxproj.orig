@@ -349,6 +349,10 @@
 				DB2389D032EA6BA9A1AC8C2D /* [CP] Embed Pods Frameworks */,
 				7B5A079F9D4A1BC1F23C622A /* [CP] Copy Pods Resources */,
 				94CB4A681E8D7228001D683F /* Embed Frameworks */,
+<<<<<<< HEAD
+=======
+				94CB4A6E1E8D868C001D683F /* Prepare for Distribution */,
+>>>>>>> 1f97301e11fcb8ca9e401900b75f806ac43d5aa7
 			);
 			buildRules = (
 			);
