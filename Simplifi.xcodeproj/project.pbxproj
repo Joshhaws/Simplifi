@@ -36,15 +36,20 @@
 		94671B231E996643008B12DF /* EnvelopeMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B221E996643008B12DF /* EnvelopeMini.swift */; };
 		94671B251E99DBD0008B12DF /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B241E99DBD0008B12DF /* ProfileTableViewController.swift */; };
 		94671B291E99F2FE008B12DF /* logoutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B281E99F2FE008B12DF /* logoutRouter.swift */; };
+		94671B2B1E9C1E6D008B12DF /* UserEnvelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B2A1E9C1E6D008B12DF /* UserEnvelopes.swift */; };
+		94671B2E1E9C3C2B008B12DF /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B2D1E9C3C2B008B12DF /* BalloonMarker.swift */; };
+		94671B301E9C5692008B12DF /* EnvelopeBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B2F1E9C5692008B12DF /* EnvelopeBasic.swift */; };
+		94671B321E9C824D008B12DF /* usersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94671B311E9C824D008B12DF /* usersRouter.swift */; };
 		946F654B1E70B6EC009431FB /* accountTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F654A1E70B6EC009431FB /* accountTransactions.swift */; };
 		948B0A291E8DB45900A98495 /* accessTokenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B0A281E8DB45900A98495 /* accessTokenRouter.swift */; };
+		9499226A1E9D797400477674 /* EditEnvelopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949922691E9D797400477674 /* EditEnvelopeViewController.swift */; };
+		9499226C1E9DC45C00477674 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9499226B1E9DC45C00477674 /* TransactionDetailViewController.swift */; };
 		94BE138D1E4BE3E7008EA7E4 /* SyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */; };
 		94BFDAFE1E55740E00E8AD5A /* Envelopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */; };
 		94C663681E4AF4D700E78A48 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C663671E4AF4D700E78A48 /* OverviewViewController.swift */; };
 		94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */; };
 		94CB4A661E8D7228001D683F /* LinkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CB4A651E8D7228001D683F /* LinkKit.framework */; };
 		94CB4A671E8D7228001D683F /* LinkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94CB4A651E8D7228001D683F /* LinkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		94D0B4F61E7B8BDD00388507 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0B4F51E7B8BDD00388507 /* BudgetViewController.swift */; };
 		94D88AA01E823E730096AEF0 /* signupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D88A9F1E823E730096AEF0 /* signupRouter.swift */; };
 		94ED3D3C1E5D5C4B0046D14D /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */; };
 		94ED3D401E5D5C9F0046D14D /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */; };
@@ -124,14 +129,19 @@
 		94671B221E996643008B12DF /* EnvelopeMini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeMini.swift; sourceTree = "<group>"; };
 		94671B241E99DBD0008B12DF /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		94671B281E99F2FE008B12DF /* logoutRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logoutRouter.swift; sourceTree = "<group>"; };
+		94671B2A1E9C1E6D008B12DF /* UserEnvelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEnvelopes.swift; sourceTree = "<group>"; };
+		94671B2D1E9C3C2B008B12DF /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		94671B2F1E9C5692008B12DF /* EnvelopeBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvelopeBasic.swift; sourceTree = "<group>"; };
+		94671B311E9C824D008B12DF /* usersRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = usersRouter.swift; sourceTree = "<group>"; };
 		946F654A1E70B6EC009431FB /* accountTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTransactions.swift; sourceTree = "<group>"; };
 		948B0A281E8DB45900A98495 /* accessTokenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accessTokenRouter.swift; sourceTree = "<group>"; };
+		949922691E9D797400477674 /* EditEnvelopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEnvelopeViewController.swift; sourceTree = "<group>"; };
+		9499226B1E9DC45C00477674 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		94BE138C1E4BE3E7008EA7E4 /* SyncHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHelper.swift; sourceTree = "<group>"; };
 		94BFDAFD1E55740E00E8AD5A /* Envelopes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Envelopes.swift; sourceTree = "<group>"; };
 		94C663671E4AF4D700E78A48 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalTabBarController.swift; sourceTree = "<group>"; };
 		94CB4A651E8D7228001D683F /* LinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LinkKit.framework; sourceTree = "<group>"; };
-		94D0B4F51E7B8BDD00388507 /* BudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		94D88A9F1E823E730096AEF0 /* signupRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupRouter.swift; sourceTree = "<group>"; };
 		94ED3D3B1E5D5C4B0046D14D /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		94ED3D3F1E5D5C9F0046D14D /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
@@ -228,10 +238,11 @@
 				945CDB571E6F052900E534A5 /* categoriesRouter.swift */,
 				945CDB591E6F060200E534A5 /* goalsRouter.swift */,
 				945CDB5B1E6F067800E534A5 /* accountsRouter.swift */,
-				946F654A1E70B6EC009431FB /* accountTransactions.swift */,
 				94D88A9F1E823E730096AEF0 /* signupRouter.swift */,
+				946F654A1E70B6EC009431FB /* accountTransactions.swift */,
 				948B0A281E8DB45900A98495 /* accessTokenRouter.swift */,
 				94671B281E99F2FE008B12DF /* logoutRouter.swift */,
+				94671B311E9C824D008B12DF /* usersRouter.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -284,10 +295,11 @@
 				03D59D331E40E60B00BE0ADF /* SignUpController.swift */,
 				94C663671E4AF4D700E78A48 /* OverviewViewController.swift */,
 				94C6636B1E4AF68C00E78A48 /* InitalTabBarController.swift */,
-				94D0B4F51E7B8BDD00388507 /* BudgetViewController.swift */,
 				944FC4AA1E8CA4BB00B4F22D /* PlaidViewController.swift */,
 				94671B201E99625E008B12DF /* CategoriesViewController.swift */,
 				94671B241E99DBD0008B12DF /* ProfileTableViewController.swift */,
+				949922691E9D797400477674 /* EditEnvelopeViewController.swift */,
+				9499226B1E9DC45C00477674 /* TransactionDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +316,8 @@
 				9404ACB11E6B6563003BC405 /* Category.swift */,
 				9404ACB31E6B6821003BC405 /* Account.swift */,
 				94671B221E996643008B12DF /* EnvelopeMini.swift */,
+				94671B2A1E9C1E6D008B12DF /* UserEnvelopes.swift */,
+				94671B2F1E9C5692008B12DF /* EnvelopeBasic.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -311,6 +325,7 @@
 		94F1909D1E385D3B0027CCAD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				94671B2D1E9C3C2B008B12DF /* BalloonMarker.swift */,
 				03CF608F1E2EAC4400C007D0 /* Assets.xcassets */,
 				03CF60941E2EAC4400C007D0 /* Info.plist */,
 				03CF608C1E2EAC4400C007D0 /* Simplifi.xcdatamodeld */,
@@ -526,6 +541,7 @@
 				9404ACB01E6B6412003BC405 /* Goals.swift in Sources */,
 				9404ACB41E6B6821003BC405 /* Account.swift in Sources */,
 				946F654B1E70B6EC009431FB /* accountTransactions.swift in Sources */,
+				94671B2E1E9C3C2B008B12DF /* BalloonMarker.swift in Sources */,
 				944FC4AB1E8CA4BB00B4F22D /* PlaidViewController.swift in Sources */,
 				945CDB581E6F052900E534A5 /* categoriesRouter.swift in Sources */,
 				945CDB4E1E6E685600E534A5 /* envelopeRouter.swift in Sources */,
@@ -538,15 +554,19 @@
 				945CDB5A1E6F060200E534A5 /* goalsRouter.swift in Sources */,
 				948B0A291E8DB45900A98495 /* accessTokenRouter.swift in Sources */,
 				945CDB5C1E6F067800E534A5 /* accountsRouter.swift in Sources */,
+				9499226C1E9DC45C00477674 /* TransactionDetailViewController.swift in Sources */,
 				94671B211E99625E008B12DF /* CategoriesViewController.swift in Sources */,
 				03E84A141E44FF4C002793CD /* loginRouter.swift in Sources */,
+				94671B2B1E9C1E6D008B12DF /* UserEnvelopes.swift in Sources */,
+				94671B301E9C5692008B12DF /* EnvelopeBasic.swift in Sources */,
 				03D59D341E40E60B00BE0ADF /* SignUpController.swift in Sources */,
 				94C6636C1E4AF68C00E78A48 /* InitalTabBarController.swift in Sources */,
-				94D0B4F61E7B8BDD00388507 /* BudgetViewController.swift in Sources */,
 				03CF60881E2EAC4400C007D0 /* ViewController.swift in Sources */,
+				9499226A1E9D797400477674 /* EditEnvelopeViewController.swift in Sources */,
 				03D59D301E40E2A600BE0ADF /* EnvelopesController.swift in Sources */,
 				94D88AA01E823E730096AEF0 /* signupRouter.swift in Sources */,
 				9404ACA81E67DDB4003BC405 /* LoginData.swift in Sources */,
+				94671B321E9C824D008B12DF /* usersRouter.swift in Sources */,
 				03CF60861E2EAC4400C007D0 /* AppDelegate.swift in Sources */,
 				9404ACAC1E6B219F003BC405 /* urlData.swift in Sources */,
 				94671B231E996643008B12DF /* EnvelopeMini.swift in Sources */,

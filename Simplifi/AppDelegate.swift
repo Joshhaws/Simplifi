@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UserDefaults.standard.synchronize()
         if UserDefaults.standard.value(forKey: "user_auth_token") == nil {
             showLoginScreen()
         } else {
@@ -27,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func showLoginScreen(){
-        
+        UserDefaults.standard.synchronize()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
         let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginNavigationVC") as! UINavigationController
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func showMain(){
+        UserDefaults.standard.synchronize()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = storyBoard.instantiateViewController(withIdentifier: "initialTabView") as! UITabBarController
         animateTransition(to: mainVC)

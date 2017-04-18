@@ -47,7 +47,9 @@ class SignUpController: UIViewController {
                         anim.duration = 7/100
                         self.view.layer.add(anim, forKey: nil)
                     } else {
-                        self.dismiss(animated: true, completion: nil)
+                        if let app = UIApplication.shared.delegate as? AppDelegate{
+                            app.showMain()
+                        }
                     }
                 })
                 

@@ -14,6 +14,8 @@ struct User {
     var lastName: String = ""
     var email: String = ""
     var userId: Int = 0
+    var overallBudget = 0
+    var overallSpent = 0
 //    var password: String
     
     init(firstName: String, lastName: String, email: String){
@@ -31,8 +33,10 @@ extension User: Unboxable{
             self.lastName = try unboxer.unbox(key: "last_name")
             self.email = try unboxer.unbox(key: "email")
             self.userId = try unboxer.unbox(key: "id")
+            self.overallBudget = try unboxer.unbox(key: "overall_budget")
+            self.overallSpent = try unboxer.unbox(key: "overall_spent")
         }catch{
-            print("ended")
+            print("Unable to parse data for User")
         }
     }
 }

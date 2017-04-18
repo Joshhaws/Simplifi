@@ -21,16 +21,16 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var envelopeView: UIView!
     
     
-    var envelope = Envelopes()
+    var envelope = UserEnvelopes()
     
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.78, blue: 0.33, alpha: 1)
         self.title = envelope.name
         envelopeNameLabel.text = envelope.name
         setRatioBar()
         setupProgressBars()
         
         self.envelopeDetailTable.dataSource = self
-        
         self.envelopeDetailTable.reloadData()
         
     }
@@ -39,12 +39,31 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
         setRatioBar()
     }
     
+    @IBAction func categoryButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "editEnvelopeSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? EditEnvelopeViewController {
+            destVC.envelope = envelope
+        }
+        if let detailVC = segue.destination as? TransactionDetailViewController {
+            if let indexPath = envelopeDetailTable.indexPathForSelectedRow {
+                detailVC.transaction = envelope.userEnvelopeTransactions[indexPath.row]
+            }
+        }
+    }
+    
     private func setRatioBar() {
-        envelopeRatioLabel.text = "\(envelope.totalSpentEnvelope)/\(envelope.amount)"
+        envelopeRatioLabel.text = "\(envelope.envelopeAmountSpent)/\(envelope.amount)"
         //get total budget width
         let budgetWidth = overallBudget.frame.size.width
         //get ratio
-        let ratio = CGFloat(envelope.totalSpentEnvelope)/CGFloat(envelope.amount)
+        var ratio: CGFloat = 0.0
+        
+        if envelope.amount != 0 {
+            ratio = CGFloat(envelope.envelopeAmountSpent)/CGFloat(envelope.amount)
+        }
         
         if ratio >= 1.0 {
             let inverseRatio = 1.0/ratio
@@ -55,21 +74,32 @@ class EnvelopeDetailController: UIViewController, UITableViewDataSource {
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Transactions in \(envelope.name)"
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return envelope.accountTransactions.count
+        return envelope.userEnvelopeTransactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = envelopeDetailTable.dequeueReusableCell(withIdentifier: "envelopeTransactionCell", for: indexPath)
-        if envelope.accountTransactions[indexPath.row].storeName == "" {
-            cell.textLabel?.text = envelope.accountTransactions[indexPath.row].testAccountName
+        if envelope.userEnvelopeTransactions[indexPath.row].storeName == "" {
+            cell.textLabel?.text = "Store Name Unavailable"
         } else{
-            cell.textLabel?.text = envelope.accountTransactions[indexPath.row].storeName
+            cell.textLabel?.text = envelope.userEnvelopeTransactions[indexPath.row].storeName
         }
-        cell.detailTextLabel?.text = "$\(envelope.accountTransactions[indexPath.row].amount)"
+        cell.detailTextLabel?.text = "$\(envelope.userEnvelopeTransactions[indexPath.row].amount)"
         return cell
     }
+    
+    
+//    transactionDetailSegue
     
     func setupProgressBars() {
         self.overallBudget.layer.cornerRadius = 2.0

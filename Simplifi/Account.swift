@@ -14,6 +14,7 @@ struct Account {
     var name = ""
     var accountType = ""
     var accountSubtype = ""
+    var institutionName = ""
 
     
     init() {}
@@ -33,6 +34,7 @@ extension Account : Unboxable {
             self.name = try unboxer.unbox(key: "name")
             self.accountType = try unboxer.unbox(key: "account_type")
             self.accountSubtype = try unboxer.unbox(key: "account_subtype")
+            self.institutionName = try unboxer.unbox(key: "institution_name")
         } catch {
             print("Unable to parse data for Accounts")
         }

@@ -18,12 +18,21 @@ class accessTokenRouter {
     }
     
     class func updloadAccessToken(token: String, completion: @escaping (_ success: Bool) -> Void){
-        Alamofire.request(accessTokenResources.url, method: .post, parameters: ["token" : token], encoding: JSONEncoding.default).responseJSON { response in
-            do{
-                
-            } catch{
-                print("Unable to read JSON, no profile exists\n \(error.localizedDescription)")
+        let headers: HTTPHeaders = [
+            "Authorization": "Token token=\(UserDefaults.standard.string(forKey: "user_auth_token")!)",
+            "Content-Type": "application/json"
+        ]
+        print("User token: \(token)")
+//        Alamofire.request(accessTokenResources.url, method: .post, parameters: ["public_token" : token], encoding: JSONEncoding.default, headers: headers) { response in
+//            
+//        }
+        
+        Alamofire.request(accessTokenResources.url, method: .post, parameters: ["public_token" : token], encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            guard response.data != nil else {
+                completion(false)
+                return
             }
+            completion(true)
         }
     }
 

@@ -14,20 +14,21 @@ class logoutRouter {
     struct logoutResources {
         static let url = urlData.urlResources.logoutUrl
         static let token = UserDefaults.standard.string(forKey: "user_auth_token")
-        static let headers: HTTPHeaders = [
-            "Authorization": "Token token=\(logoutResources.token!)",
-            "Content-Type": "application/json"
-        ]
+
     }
     
     class func logout(completion: @escaping () -> Void) {
-        Alamofire.request(logoutResources.url, headers: logoutResources.headers).responseJSON { response in
-            UserDefaults.standard.set(nil, forKey: "user_auth_token")
-            UserDefaults.standard.set(nil, forKey: "user_id")
-            UserDefaults.standard.set(nil, forKey: "user_firstName")
-            UserDefaults.standard.set(nil, forKey: "user_lastName")
-            UserDefaults.standard.set(nil, forKey: "user_email")
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Token token=\(UserDefaults.standard.string(forKey: "user_auth_token")!)",
+            "Content-Type": "application/json"
+        ]
+        Alamofire.request(logoutResources.url, headers: headers).responseJSON { response in
+            
+            let appDomain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: appDomain)
             UserDefaults.standard.synchronize()
+            print("Token: \(UserDefaults.standard.string(forKey: "user_auth_token") as Any)")
         }
     }
 }

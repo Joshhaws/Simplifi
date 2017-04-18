@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/Transactions.swift"
-            timestampString = "513053725.104357"
+            timestampString = "513550204.785468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "init(unboxer:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/categoriesRouter.swift"
-            timestampString = "513375819.602299"
+            timestampString = "513662560.406761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "getCategories(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -86,11 +86,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/ProfileTableViewController.swift"
-            timestampString = "513540591.901655"
+            timestampString = "513648801.728141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -99,33 +99,33 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Simplifi.ProfileTableViewController.viewDidLoad () -&gt; ()"
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/ProfileTableViewController.swift"
-                  timestampString = "513483244.341449"
+                  timestampString = "513577443.794637"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "4066">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Simplifi.ProfileTableViewController.(viewDidLoad () -&gt; ()).(closure #1)"
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/ProfileTableViewController.swift"
-                  timestampString = "513483244.34295"
+                  timestampString = "513577443.795821"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -170,7 +170,7 @@
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/LoginController.swift"
-                  timestampString = "513483244.349019"
+                  timestampString = "513577443.801225"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -185,7 +185,7 @@
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/LoginController.swift"
-                  timestampString = "513483244.35023"
+                  timestampString = "513577443.802506"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/envelopeRouter.swift"
-            timestampString = "513482306.200646"
+            timestampString = "513562766.12989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "envelopeResource"
             landmarkType = "14">
             <Locations>
@@ -214,46 +214,46 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "globalinit_33_2B4C27DE30CBCF9999ED0436B563EB67_func1"
+                  symbolName = "globalinit_33_2B4C27DE30CBCF9999ED0436B563EB67_func2"
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
-                  timestampString = "513483244.35303"
+                  timestampString = "513577443.80573"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Simplifi.envelopeRouter.envelopeResource.token.unsafeMutableAddressor : Swift.Optional&lt;Any&gt;"
+                  symbolName = "Simplifi.envelopeRouter.envelopeResource.token.unsafeMutableAddressor : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
-                  timestampString = "513483244.35428"
+                  timestampString = "513577443.806946"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Simplifi.envelopeRouter.envelopeResource.token.getter : Swift.Optional&lt;Any&gt;"
+                  symbolName = "static Simplifi.envelopeRouter.envelopeResource.token.getter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "Simplifi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
-                  timestampString = "513483244.355648"
+                  timestampString = "513577443.808127"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "156">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "70">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -265,12 +265,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simplifi/envelopeRouter.swift"
-            timestampString = "513482362.630515"
+            timestampString = "513630028.244484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "getEnvelopes(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/envelopeRouter.swift"
+            timestampString = "513630028.244484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getEnvelopes(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Simplifi.envelopeRouter.getEnvelopes (completion : (Swift.Array&lt;Simplifi.UserEnvelopes&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Simplifi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
+                  timestampString = "513551028.7716"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Simplifi.envelopeRouter.(getEnvelopes (completion : (Swift.Array&lt;Simplifi.UserEnvelopes&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Simplifi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
+                  timestampString = "513551028.77278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/UserEnvelopes.swift"
+            timestampString = "513550255.184301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(unboxer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/Transactions.swift"
+            timestampString = "513551019.498064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "init(unboxer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/UserEnvelopes.swift"
+            timestampString = "513553093.479379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(unboxer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/EnvelopesController.swift"
+            timestampString = "513644513.307901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/OverviewViewController.swift"
+            timestampString = "513644513.307901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "updateChartWithData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -280,46 +408,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Simplifi/envelopeRouter.swift"
-            timestampString = "513482364.01425"
+            filePath = "Simplifi/LoginData.swift"
+            timestampString = "513572858.699056"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(unboxer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/usersRouter.swift"
+            timestampString = "513574888.518525"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "usersRouter"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simplifi/CategoriesViewController.swift"
+            timestampString = "513577442.264604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "getEnvelopes(completion:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Simplifi.envelopeRouter.getEnvelopes (completion : (Swift.Array&lt;Simplifi.Envelopes&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Simplifi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
-                  timestampString = "513483244.35892"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "57">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Simplifi.envelopeRouter.(getEnvelopes (completion : (Swift.Array&lt;Simplifi.Envelopes&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Simplifi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jordanrader/Documents/developer/SimpliFi/Simplifi/envelopeRouter.swift"
-                  timestampString = "513483244.360068"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

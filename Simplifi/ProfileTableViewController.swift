@@ -14,25 +14,33 @@ class ProfileTableViewController : UITableViewController {
     
     var userInformation: [String] = []
     var accounts: [Account] = []
+    var refresher: UIRefreshControl!
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 200, blue: 83, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.78, blue: 0.33, alpha: 1)
 //        self.navigationController?.navigationBar.titleTextAttributes. = UIColor.white
         
-        if UserDefaults.standard.string(forKey: "user_firstName") != nil {
-            userInformation.append("\(UserDefaults.standard.string(forKey: "user_firstName")!) \(UserDefaults.standard.string(forKey: "user_lastName")!)")
-        } else{ userInformation.append("")}
+        refresher = UIRefreshControl()
+        self.refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refresher.addTarget(self, action: #selector(ProfileTableViewController.refreshData), for: .valueChanged)
+        self.tableView?.addSubview(refresher)
         
-        if UserDefaults.standard.string(forKey: "user_email") != nil {
-             userInformation.append(UserDefaults.standard.string(forKey: "user_email")!)
-        } else { userInformation.append("")}
+        userInformation.append("\(UserDefaults.standard.string(forKey: "user_firstName")!) \(UserDefaults.standard.string(forKey: "user_lastName")!)")
+        userInformation.append(UserDefaults.standard.string(forKey: "user_email")!)
         userInformation.append("Logout")
         
-        //"\(String(describing: SyncHelper.Constants.userFirstName!)) \(String(describing: SyncHelper.Constants.userLastName!))", "\(String(describing: SyncHelper.Constants.userEmail!))", "Logout"
         accountRouter.getAccounts(completion: {accounts in
             self.accounts = accounts
             self.tableView.reloadData()
             })
+    }
+    
+    func refreshData() {
+        accountRouter.getAccounts(completion: {accounts in
+            self.accounts = accounts
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        })
     }
     
     
@@ -69,13 +77,13 @@ class ProfileTableViewController : UITableViewController {
         
         if indexPath.section == 0 {
             cell.textLabel?.text = userInformation[indexPath.row]
-            if indexPath.row == 2 {
-                cell.textLabel?.textColor = UIColor.red
-            }
+            cell.detailTextLabel?.text = ""
         } else if indexPath.section == 1 {
             cell.textLabel?.text = accounts[indexPath.row].name
+            cell.detailTextLabel?.text = accounts[indexPath.row].institutionName
         } else {
             cell.textLabel?.text = "Add Account"
+            cell.detailTextLabel?.text = ""
         }
         return cell
     }
@@ -86,12 +94,12 @@ class ProfileTableViewController : UITableViewController {
         } else if indexPath.section == 2 {
             presentPlaidLinkWithCustomConfiguration()
         } else if indexPath.section == 0 && indexPath.row == 2 {
-            logoutRouter.logout(completion: { success in})
             if let app = UIApplication.shared.delegate as? AppDelegate{
                 let title = ""
                 let message = "Are you sure you want to logout?"
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .destructive, handler: { alertAction in
+                    logoutRouter.logout(completion: { success in})
                     app.showLoginScreen()
                 })
                 let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -109,21 +117,25 @@ class ProfileTableViewController : UITableViewController {
     func didReceiveNotification(_ notification: Notification) {
         if notification.name.rawValue == "PLDPlaidLinkSetupFinished" {
             NotificationCenter.default.removeObserver(self, name: notification.name, object: nil)
-            //            button.isEnabled = true
         }
     }
     
     func handleSuccessWithToken(_ publicToken: String, metadata: [String : AnyObject]?) {
         //        accessTokenRouter.updloadAccessToken(token: publicToken, completion: <#T##(Bool) -> Void#>)
-        presentAlertViewWithTitle("Success", message: "token: \(publicToken)\nmetadata: \(metadata!)")
+        accessTokenRouter.updloadAccessToken(token: publicToken, completion: {success in
+            self.refreshData()
+        })
+//        presentAlertViewWithTitle("Success", message: "token: \(publicToken)\nmetadata: \(metadata!)")
+        presentAlertViewWithTitle("Success", message: "You've succesfully added an account")
     }
     
     func handleError(_ error: NSError, metadata: [String : AnyObject]?) {
-        presentAlertViewWithTitle("Failure", message: "error: \(error.localizedDescription)\nmetadata: \(metadata!)")
+        presentAlertViewWithTitle("Failure", message: "There was a problem adding the account")
+//        presentAlertViewWithTitle("Failure", message: "error: \(error.localizedDescription)\nmetadata: \(metadata!)")
     }
     
     func handleExitWithMetadata(_ metadata: [String : AnyObject]?) {
-        presentAlertViewWithTitle("Exit", message: "metadata: \(metadata!)")
+//        presentAlertViewWithTitle("Exit", message: "metadata: \(metadata!)")
     }
     
     func presentAlertViewWithTitle(_ title: String, message: String) {
@@ -136,7 +148,7 @@ class ProfileTableViewController : UITableViewController {
     
     // MARK: Plaid Link setup with custom configuration
     func presentPlaidLinkWithCustomConfiguration() {
-        // With custom configuration9
+        // With custom configuration
         let linkConfiguration = PLKConfiguration(key: SyncHelper.Constants.plaidApiKey, env: .sandbox, product: .auth, selectAccount: false, longtailAuth: false, apiVersion: .PLKAPIv2)
         linkConfiguration.clientName = "SimpliFi"
         let linkViewDelegate = self
@@ -146,8 +158,9 @@ class ProfileTableViewController : UITableViewController {
         }
         present(linkViewController, animated: true, completion: nil)
     }
-    
 }
+
+
 
 extension ProfileTableViewController : PLKPlaidLinkViewDelegate {
     

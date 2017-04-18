@@ -39,17 +39,11 @@ class signupRouter {
                     UserDefaults.standard.set(login.lastName, forKey: "user_lastName")
                     UserDefaults.standard.set(login.email, forKey: "user_email")
                     UserDefaults.standard.synchronize()
-                    
-                    SyncHelper.Constants.sessionTokenKey = login.token
-                    SyncHelper.Constants.userIDKey = login.userId
-                    SyncHelper.Constants.userFirstName = login.firstName
-                    SyncHelper.Constants.userLastName = login.lastName
-                    SyncHelper.Constants.userEmail = login.email
 
                     completion(true)
                 }
-                completion(false)
             } catch{
+                completion(false)
                 print("Unable to read JSON, Unable to sign up new user\n \(error.localizedDescription)")
             }
         }

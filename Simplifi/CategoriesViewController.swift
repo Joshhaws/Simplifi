@@ -19,6 +19,7 @@ class CategoriesViewController: UITableViewController {
     var envelopeHeader = "Donations"
     
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0, green: 0.78, blue: 0.33, alpha: 1)
         categoriesRouter.getCategories(completion: {categories in
             for i in 0..<categories.count {
                 if categories[i].envelope.id == self.envelopeId {
